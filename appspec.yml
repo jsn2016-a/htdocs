@@ -1,24 +1,18 @@
 version: 0.0
 os: linux
 files:
-  - source: /.settings
-    destination: /var/www/html/
-  - source: /css
-    destination: /var/www/html/
-  - source: /images
-    destination: /var/www/html/
-  - source: /js
-    destination: /var/www/html/
-  - source: /view
-    destination: /var/www/html/
-  - source: /.project
-    destination: /var/www/html/
-  - source: /.tern-project
-    destination: /var/www/html/
-  - source: /index.html
+  - source: /
     destination: /var/www/html/
 permissions:
   - object: /var/www/html
+    pattern: "*"
+    owner: apache
+    group: apache
+    mode: 744
+    type:
+      - file
+  - object: /var/www/html
+    pattern: "*"
     owner: apache
     group: apache
     mode: 744
