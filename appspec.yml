@@ -1,0 +1,37 @@
+version: 0.0
+os: linux
+files:
+  - source: /.settings
+    destination: /var/www/html/
+  - source: /bk
+    destination: /var/www/html/
+  - source: /css
+    destination: /var/www/html/
+  - source: /images
+    destination: /var/www/html/
+  - source: /js
+    destination: /var/www/html/
+  - source: /view
+    destination: /var/www/html/
+  - source: /.project
+    destination: /var/www/html/
+  - source: /.tem-project
+    destination: /var/www/html/
+  - source: /index.html
+    destination: /var/www/html/
+permissions:
+  - object: /var/www/html
+    owner: apache
+    group: apache
+    mode: 744
+    type:
+      - directory
+hooks:
+  ApplicationStop:
+    - location: deploy-script/Stop.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: deploy-script/Start.sh
+      timeout: 300
+      runas: root

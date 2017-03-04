@@ -1,0 +1,69 @@
+
+<!-- 
+ -->
+<div class="toggle">
+	<a tabindex="2020">
+		<button type="button" id="header_menu" class="navbar-toggle toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</a>
+</div>
+
+<div id="drawer">
+	<div class="toggle"><a tabindex="2230">Close</a></div>
+	<div class="inner">
+		<div class="menu">
+			<nav class="local">
+				<ul>
+<!-- 
+					<li ng-click="transitionCamera('cameraRoll', 'all')"><a>カメラロール</a></li>
+ -->
+					<li class="sub"><a>女ラク</a>
+						<ul id="ln01">
+							<li ng-click="transitionCamera('friend', '1')"><a>万葉クラブ</a></li>
+							<li ng-click="transitionCamera('friend', '2')"><a>館林はとバスの旅</a></li>
+							<li ng-click="transitionCamera('friend', '3')"><a>同期ディズニー</a></li>
+							<li ng-click="transitionCamera('friend', '4')"><a>2015_DF会</a></li>
+							<li ng-click="transitionCamera('friend', '5')"><a>2015_前期納会</a></li>
+							<li ng-click="transitionCamera('friend', '6')"><a>VS専修戦</a></li>
+							<li ng-click="transitionCamera('friend', '7')"><a>台湾旅行</a></li>
+							<li ng-click="transitionCamera('friend', '8')"><a>卒業式</a></li>
+							<li ng-click="transitionCamera('friend', '9')"><a>卒業後。。。</a></li>
+						</ul>
+					</li>
+					<li class="sub"><a>教育実習</a>
+						<ul id="ln01">
+							<li ng-click="transitionCamera('jazz', '1')"><a>最終日</a></li>
+							<li ng-click="transitionCamera('jazz', '2')"><a>合唱コン</a></li>
+						</ul>
+					</li>
+					
+					<li class="sub"><a>ゼミ</a>
+						<ul id="ln01">
+							<li ng-click="transitionCamera('jazz', '1')"><a>2014_ゼミ合宿</a></li>
+							<li ng-click="transitionCamera('jazz', '2')"><a>独・仏・西旅行</a></li>
+						</ul>
+					</li>
+					<li class="sub"><a>JMAS同期</a>
+						<ul id="ln01">
+							<li ng-click="transitionCamera('jazz', '1')"><a>スポッチャ</a></li>
+							<li ng-click="transitionCamera('jazz', '2')"><a>日光旅行</a></li>
+						</ul>
+					</li>
+					<li class="sub"><a>プライベート</a>
+						<ul id="ln01">
+							<li ng-click="transitionCamera('jazz', '1')"><a>いとこ結婚式</a></li>
+							<li ng-click="transitionCamera('jazz', '2')"><a>ジブリ</a></li>
+							<li ng-click="transitionCamera('jazz', '2')"><a>怪獣酒場</a></li>
+						</ul>
+					</li>					
+					<li ng-click="transitionGroup('selectGroup', '')"><a>グループ選択画面へ</a></li>
+										
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<div id="headerTitle" ng-bind="headerTitle"></div>

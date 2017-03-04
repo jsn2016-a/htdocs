@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+/* 乱数表 */
+
+table#GridLayout td { border:solid; border-width:1px; border-color:#666666; background-color:#FFFFFF; width:9% }
+table#GridLayout th { border:solid; border-width:1px; border-color:#000000; background-color:#666666 ; font-family:Arial; color:#FFFFFF; width:9% }
+table#GridLayout .Highlight { background-color:#F5DEB3 }
+table#GridLayout .Focus { background-color:#720000 }
+.regular .authFunction .kbd a:before{content:''; display:block; background:url(../images/sprite_pc.png) -40px 0; width:20px; height:12px; margin-right:5px; vertical-align:middle; display:inline-block;}
+#container .regular .authFunction .kbd a:after{display:none;}

@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+/*!
+    画面中央の黒枠を消すため
+    angular-block-ui.cssを複製
+*/
+
+.block-ui-message {
+  display: inline-block;
+  text-align: left;
+  background-color: #333;
+  color: #f5f5f5;
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  /* needed for IE */
+  
+  filter: alpha(opacity=100);
+  display: none;
+}

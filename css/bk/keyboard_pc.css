@@ -1,0 +1,194 @@
+		/* reset */
+		*{
+			-webkit-box-sizing : border-box ;
+			-moz-box-sizing : border-box ;
+			box-sizing : border-box ;
+		}
+		.keyboard_area div,.keyboard_area ul,.keyboard_area li,.keyboard_area span,.keyboard_area button {
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix:after {
+			clear: both;
+		}
+		.clearfix:before,
+		.clearfix:after {
+			display: table;
+			content: "";
+		}
+		/* keyboard_area */
+		div#keyboard_block {
+			position: absolute;
+		}
+		.keyboard_area {
+			width: 700px;
+			height: 156px;
+			border-radius: 4px;
+			border: solid 2px #ccc; 
+			background: #f8f8f8;
+			/*box-shadow: 2px 2px 2px rgba(0,0,0,.2);*/
+			padding: 10px;
+			position: absolute;
+			top: -50px;
+			z-index: 999999;
+		}
+		.authFunction .keyboard_area {
+			width: 420px;
+			top: -40px;
+		}
+		.authFunction .keyboard_area.challenge1 {
+			margin-left: -20px;
+		}
+		.authFunction .keyboard_area.challenge2 {
+			margin-left: 0px;
+		}
+		.authFunction .keyboard_area.challenge3 {
+			margin-left: 30px;
+		}
+		.keyboard_area:before,
+		.keyboard_area:after {
+			content: "";
+			position: absolute;
+			top: -12px;
+			left: 335px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			/*
+			border-width: 0 13px 15px 13px;
+			border-color: transparent transparent #f8f8f8 transparent;
+			*/
+			z-index: 999999;
+		}
+		.authFunction .keyboard_area:before,
+		.authFunction .keyboard_area:after {
+			left: 60px;
+		}
+		.authFunction .keyboard_area.challenge1:before,
+		.authFunction .keyboard_area.challenge1:after {
+			left: 60px;
+		}
+		.authFunction .keyboard_area.challenge2:before,
+		.authFunction .keyboard_area.challenge2:after {
+			left: 145px;
+		}
+		.authFunction .keyboard_area.challenge3:before,
+		.authFunction .keyboard_area.challenge3:after {
+			left: 225px;
+		}
+		.keyboard_area:after{
+			border-color: transparent transparent #f8f8f8 transparent;
+			border-width: 0 12px 15px 12px;
+			margin-top:0;
+		}
+		.keyboard_area:before{
+			border-color: transparent transparent #ccc transparent;
+			border-width: 0 12px 15px 12px;
+			margin-top:-3px;
+		}
+		#keyboard_area .letter_small,
+		#keyboard_area .letter_big,
+		#keyboard_area .letter_number {
+			margin-right: 10px;
+			float: left;
+			color: #333;
+			background: #fff;
+			height: 130px;
+			border-radius: 4px;
+		}
+		#keyboard_area .letter_small {
+			width: 224px;
+		}
+		#keyboard_area .letter_big {
+			width: 224px;
+			color: #666;
+		}
+		#keyboard_area .letter_number {
+			width: 94px;
+			margin-right: 0px;
+		}
+		.keyboard_area_btn {
+			width: 112px;
+			float: right;
+			text-align: right;
+		}
+		.authFunction .keyboard_area_btn {
+			width: 60px;
+		}
+		#keyboard_area button {
+			color: #fff;
+			text-align: center;
+			font-size: 12px;
+			width: 100px;
+			height: 30px;
+			border: none;
+			border-radius: 4px;
+			margin-bottom: 4px;
+			background: #4dc3e7;
+			background: -moz-linear-gradient(top,  #4dc3e7 0%, #4dc3e7 48%, #00a9dd 52%, #00a9dd 100%);
+			background: -webkit-linear-gradient(top,  #4dc3e7 0%,#4dc3e7 48%,#00a9dd 52%,#00a9dd 100%);
+			background: linear-gradient(to bottom,  #4dc3e7 0%,#4dc3e7 48%,#00a9dd 52%,#00a9dd 100%);
+		}	
+		#keyboard_area button.close {
+			background: #C51423;
+			width: 30px;
+			font-size: 20px;
+			line-height: 20px;
+			margin-bottom: 36px;
+		}
+		#keyboard_area button.close:hover,
+		#keyboard_area ul.key li:hover {
+			opacity: 0.7;
+		}
+		#keyboard_area ul.key {
+			width: 90%;
+			margin:0 auto;
+			padding-top: 10px;
+		}
+		#keyboard_area ul.key li {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			font-weight: bold;
+			font-size: 12px;
+			margin-bottom: 4px;
+			width: 24px;
+			height: 24px;
+			background: #f8f8f8;
+			border: solid 1px #ccc;
+			border-radius: 2px;
+			box-shadow: 0 1px 0 #ccc;
+		}
+		#keyboard_area .letter_small ul li {
+			margin-right: 2.4px;
+			margin-left: 2.4px;
+		}
+		#keyboard_area .letter_big ul li {
+			margin-right: 2.4px;
+			margin-left: 2.4px;
+		}
+		#keyboard_area .letter_number ul li {
+			margin-right: 2px;
+			margin-left: 2px;
+		}
+		#keyboard_area ul.key li span {
+			vertical-align: middle;
+		}
+		.authFunction .letter_small {
+			display: none;
+		}
+		.authFunction #clear_btn {
+			display: none;
+		}
+		.authFunction #clear_all_btn {
+			display: none;
+		}
+		#spGrid .spDisabled {
+			display: none;
+		}
+		#spGrid sfc-keyboard {
+			display: none;
+		}
+		p.keybordLink a {
+			margin-left: 2px;
+		}

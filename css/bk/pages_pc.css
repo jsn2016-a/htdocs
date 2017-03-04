@@ -1,0 +1,467 @@
+@charset "utf-8";
+/* basic color scheme
+=================================================== */
+/*
+main > #00a9dd > Blue
+sub  > #007ab9 > Navy
+back > #f2f2f2 > Pale Gray
+dark > #8c8c8c > Gray
+text > #585858
+border(form/table) > #ccc
+heading/label > #000
+*/
+/* PLG0001 ログイン */
+body.login #container{padding-top:30px;}
+body.login h1.mainTtl{font-size:31px; color:#00a9dd; text-align:center; margin-bottom:20px;}
+body.login .loginPanel{width:570px; float:left; position: relative;height:430px;padding-left: 15px;padding-right: 15px;}
+body.login .loginPanel dl{width:100%; margin:10px 0 0; position:relative; z-index:10;}
+body.login .loginPanel dt{clear:both; float:left; width:240px; padding:10px 0 0 0; color:#00; line-height:1; margin-bottom:0px; position:relative;}
+body.login .loginPanel dd{padding:5px 0 5px 240px; white-space:nowrap; font-size:13px; margin-bottom:10px;}
+body.login .loginPanel dd input{width:160px;}
+body.login .loginPanel dt:first-of-type{z-index:2;}
+body.login .loginPanel dt:last-of-type{z-index:0;}
+body.login .loginPanel .kbd{font-size:13px; margin-bottom:20px; clear:both;}
+body.login .loginPanel .kbd a,.regular .authFunction .kbd a{color:#999; text-decoration:none;}
+body.login .loginPanel .kbd a:before{content:''; display:block; background:url(../images/sprite_pc.png) -40px 0; width:20px; height:12px; margin-right:5px; vertical-align:middle; display:inline-block;}
+body.login #container .loginPanel .kbd a:after{display:none;}
+body.login .loginPanel .kbd a:hover, .regular .authFunction .kbd a:hover{text-decoration:underline;}
+body.login .loginPanel .btnSpace{margin-bottom:15px;}
+body.login .loginPanel p{font-size:13px;}
+body.login .helper{width:370px; float:right;}
+body.login .helper p.notes{margin-bottom:15px;}
+body.login .helper p.btnSpace{margin-bottom:10px;}
+body.login .helper ul{margin-bottom:10px;margin-right: 25px;padding-left: 25px;text-align: left;}
+span.btnLink {margin-left: -15px;}
+.dummyText{width:2px;height:2px;position:absolute;opacity:0}
+
+/* PTP0001 トップ */
+/*body.top #container{padding-top:0; background:url(../images/sideBg_pc.png) repeat-y right top;}
+body.top .version{background:url(../images/sideBg_pc.png) repeat-y right top; /*margin-bottom: 0px; top: 0px;*//*}*/
+body.top #topMain{width:700px; float:left; padding-right:15px;}
+/*body.top #siteInfo{width:260px; float:right; padding:15px; background:#fff;}*/
+body.top #siteInfo{width:260px; float:right; padding:15px;}
+.totalAmount{font-size:26px; font-weight:bold; padding: 0 215px 0 60px; margin-bottom:10px;}
+.totalAmount small{font-size:20px; font-weight:normal;}
+.balance dl.totalBalance{width:294px; float:left; border:1px #ccc solid; border-radius:4px; margin-right:13px;}
+body.top .balance dl.totalBalance{width:203px;}
+.balance dl.totalBalance:last-of-type{margin-right:0;}
+.balance dl.totalBalance dt{background:#007ab9; padding:5px; text-align:center; border-radius:4px 4px 0 0; color:#fff; font-size:13px;}
+.balance dl.totalBalance dd{text-align:center; padding:5px; min-height:60px;}
+.balance dl.totalBalance dd p{font-weight:bold; font-size:16px; margin:0;}
+.balance dl.totalBalance dd p small{font-size:13px; font-weight:normal;}
+.balance dl.totalBalance dd li{display:inline-block; margin:0 10px; font-size:12px;}
+.balance dl.totalBalance+p{clear:both; padding-top:10px;}
+body.top table col:nth-child(1){width:110px;}
+body.top table col:nth-child(2){width:auto;}
+body.top table col:nth-child(3){width:130px;}
+body.top table col:nth-child(4){width:130px;}
+body.top table tr td:nth-child(3),
+body.top table tr td:nth-child(4){font-weight:bold; text-align:right;}
+body.top table tr td:nth-child(3) small,
+body.top table tr td:nth-child(4) small{font-size:13px; font-weight:normal;}
+body.top .stepup dl{width:195px; float:left; border-right:1px #ccc solid; margin:0 0 15px 33px; min-height:70px;padding-right: 25px}
+body.top .stepup dl:last-of-type{margin-right:0;border-right: 0px;padding-right: 33px;}
+body.top .stepup dl dt{font-size:13px;}
+body.top .stepup dl dd{text-align:center; padding-bottom:10px;}
+body.top .stepup dl dd em{font-size:26px; font-weight:bold; margin-right:5px; margin-left: 5px;}
+body.top .stepup dl dd.stage{padding:7px 0 0 0; text-align:center;}
+body.top .stepup dl dd img{width:160px; height:50px;}
+body.top .stepup .btmLinks{border-top:1px #ccc solid; clear:both; background:#f2f2f2; border-radius:0 0 6px 6px; box-shadow: 0px 1.5px 2px rgba(0,0,0,.2);}
+body.top .stepup .btmLinks ul{clear:both;}
+body.top .stepup .btmLinks ul:after{content:''; display:block; clear:both;}
+body.top .stepup .btmLinks li{width:50%; float:left; padding:10px; text-align:center; font-size:13px;}
+body.top .stepup .btmLinks li:first-child{border-right:1px #ccc solid;}
+#siteInfo .banner{margin-bottom:15px;}
+#siteInfo .banner img{display:block;}
+#siteInfo .exchangeRate{border:1px #ccc solid; border-radius:6px; padding:10px; background-color:#ffffff;}
+#siteInfo .exchangeRate header{background:#007ab9; padding:5px; text-align:center; border-radius:6px 6px 0 0; color:#fff; margin:-10px -10px 10px;}
+#siteInfo .exchangeRate table{margin-bottom:0;}
+#siteInfo .exchangeRate table,
+#siteInfo .exchangeRate table th,
+#siteInfo .exchangeRate table td{font-size:13px; border:none; background:none; padding:2px 0;}
+#siteInfo .exchangeRate table th{text-align:center; padding:0;}
+#siteInfo .exchangeRate table td img{vertical-align:middle; width:20px; height:auto; margin-right: 10px; margin-bottom:1px;}
+#siteInfo .exchangeRate table td em{font-size: 16px;font-weight: bold;}
+#siteInfo .exchangeRate table td:last-child{font-weight:bold; text-align:right}
+#siteInfo .exchangeRate table td:last-child small{font-weight:normal; font-size:12px;}
+#siteInfo .exchangeRate p{text-align:right; font-size:13px; margin:5px 0 0;}
+#siteInfo .exchangeRate p.fxTopLink{text-align:center; /*text-decoration: underline;*/ color: #00a9dd;}
+#siteInfo .guide{margin-bottom:10px;}
+#siteInfo .guide li{border-bottom:1px #ccc solid; padding:10px 0; text-align:center; font-size:13px;}
+#siteInfo .guide li a:hover{text-decoration:underline;}
+#siteInfo .guide li.notice{text-align:left; padding-left:50px; position:relative;}
+#siteInfo .guide li.notice:before{content:''; display:block; width:36px; height:27px; background:url(../images/sprite_pc.png) no-repeat -320px 0; position:absolute; left:5px; top:50%; margin-top:-13px;}
+#siteInfo .data li{margin-bottom:7px; font-size:13px;}
+#siteInfo .data li a{width:100%;}
+#siteInfo .guide a{text-decoration:none;}
+#siteInfo.onWhiteSpace{z-index:0; position:absolute; margin-left:700px;}
+div.whiteSpace{float:left; position:absolute; /*height:100%; */background:#fff; z-index:-1; margin-left:700px;}
+
+div.totalAccountBalance {float: left;margin-right: 10px;}
+div.unit {float: right;margin-left: 5px;}
+div.moneryunit {float: left;margin-right: 5px;}
+.exchangeRate div.yen {float: right;margin-left: 5px;margin-top: 3px;}
+.amounMoney {text-align: right;}
+div#stepUpArea {height: 76px;}
+.depositArea {padding-right: 35px;}
+
+/* PTR0001 振込TOP / PTR0002 振込先口座選択 / PTR0003 振込先情報の入力 / PTR0006 振込先情報の入力（金額入力） */
+.notetxt{margin-bottom:1em;}
+table.transferBalance{width:auto; margin-bottom:0px;}
+table.transferBalance th{padding-right:16px; white-space:nowrap; font-size:100%;}
+table.transferBalance th.ftLimitHeaderCell{padding-right: 0px; padding-left: 0px;}
+table.transferBalance td{padding-right:60px; white-space:nowrap; font-size:26px !important;}
+table.transferBalance td{text-align:right;}
+table.transferBalance td.moneyf{font-size:100% !important; font-weight:normal; vertical-align:middle !important;}
+table.transferBalance td small{font-size:20px; font-weight:normal; margin-left:5px;}
+table.transferBalance td.balanceValueCell{padding-right: 80px; min-width: 280px;}
+table.transferBalance td.balanceValueCell span.overDigit{font-size: 22px;}
+table.transferBalance td.balanceValueCell.moneyf{padding-right: 80px; min-width: 270px;}
+table.transferBalance td.freeTransferCountValueCell{padding-right: 80px; min-width: 280px;}
+table.transferBalance td.freeTransferCountValueCell.moneyf{padding-right: 80px; min-width: 270px;}
+table.transferBalance td.ftLimitValueCell{min-width: 248px; padding-right: 0px;}
+table.transferBalance td.ftLimitValueCell.moneyf{min-width: 190px; padding-right: 0px;}
+
+table.transferInfo {table-layout: fixed;}
+table.transferInfo col:nth-child(1){width:24%;}
+table.transferInfo td {word-wrap: break-word; word-break: break-all;}
+table.transferInfo td span{width:170px; display:inline-block;}
+table.transferInfo span{padding:5px;}
+section table.transferInfo td button{width:160px; height:31px; line-height:31px;}
+section table.transferInfo td button{padding:0 5px;}
+table.transferInfo.conf td{font-weight:bold;}
+ul.bankList{border:1px #ccc solid; border-radius:6px; padding:15px 0 5px 15px; clear:both; margin-bottom:30px;}
+ul.bankList:after{content:''; display:block; clear:both;}
+ul.bankList li{width:20%; padding-right:15px; float:left; margin-bottom:10px;}
+ul.bankList li a{width:100%; height:30px; line-height:30px; font-size:13px;}
+ul.bankList li button{width:170px;}
+.searchBox{width:300px; padding: 5px 0px 5px 5px;}
+.searchBox input{width:200px;}
+.searchBox button{width:80px; border-radius:0 4px 4px 0;}
+ul.bankSearchResult{border:1px #ccc solid; border-radius:6px; padding:15px 0 15px 15px; clear:both; margin:10px 0 0 0;}
+ul.bankSearchResult li{width:30%; display:inline-block; margin-bottom:10px;}
+ul.branchSearchResult{border:1px #ccc solid; border-radius:6px; padding:15px 0 15px 15px; clear:both; margin:10px 0 0 0;}
+ul.branchSearchResult li{width:30%; display:inline-block; margin-bottom:10px;}
+table.transportFrom{width:auto;}
+table.transportFrom th{font-weight:normal; line-height:1.2;}
+.registToList{text-align:center; display:block; padding:10px;}
+
+/* PTR0002 振込先口座選択 */
+table.beneficiaryList col:nth-child(1){width:299px;}
+table.beneficiaryList col:nth-child(2){width:159px;}
+table.beneficiaryList col:nth-child(3){width:89px;}
+table.beneficiaryList col:nth-child(4){width:107px;}
+table.beneficiaryList col:nth-child(5){width:154px;}
+table.beneficiaryList col:nth-child(6){width:100px;}
+.beneficiaryList button{width: 80px; padding: 0 5px;}
+
+/* PTR0003 振込先情報の入力 */
+button.beneficiaryAccountTypeBtn{background: #ccc;border: 1px #e4e4e4 solid;box-shadow: none;color: #585858; margin-right:5px;}
+button.beneficiaryAccountTypeBtn.active{background: #fff;border: 2px #00a8de solid;}
+button.beneficiaryAccountTypeBtn:disabled{color:#bbb; box-shadow:none; background:#eee; cursor:default; border: none;}
+#transferBranch .selectedBank{color: #0076b8;}
+
+/* PTR0010 振込状況照会・取消 */
+table.balanceInquires col:nth-child(1){width:30px;}
+table.balanceInquires col:nth-child(2){width:70px;}
+table.balanceInquires col:nth-child(3){width:70px;}
+table.balanceInquires col:nth-child(4){width:70px;}
+table.balanceInquires col:nth-child(5){width:150px;}
+table.balanceInquires col:nth-child(6){width:140px;}
+table.balanceInquires col:nth-child(7){width:110px;}
+table.balanceInquires col:nth-child(8){width:70px;}
+table.balanceInquires col:nth-child(9){width:90px;}
+table.balanceInquires col:nth-child(10){width:85px;}
+table.balanceInquires tbody tr td:nth-child(1){text-align:center;}
+table.balanceInquires tbody tr td:nth-child(6){text-align:right;}
+button.cancelBtn {width: 70px; padding: 0 5px;}
+table.balanceInquires td:nth-child(4){word-break:break-all;}
+table.balanceInquires td:nth-child(5){word-break:break-all;}
+table.balanceInquires td:nth-child(8){word-break:break-all;}
+section.table.deleteTransferTitle{padding-bottom: 1px;}
+div.deleteTransfer{border:1px #ccc solid; border-radius:6px; padding:10px 0 10px 10px; clear:both; margin:15px 0 15px 0;}
+
+/* PTR0011 振込先口座の登録・削除 */
+table.registeredAccounts col:nth-child(1){width:190px;}
+table.registeredAccounts col:nth-child(2){width:190px;}
+table.registeredAccounts col:nth-child(3){width:190px;}
+table.registeredAccounts col:nth-child(4){width:80px;}
+table.registeredAccounts col:nth-child(5){width:120px;}
+table.registeredAccounts col:nth-child(6){width:auto;}
+table.registeredAccounts tbody tr td:nth-child(4){text-align:left;}
+#container table.registeredAccounts tbody td{vertical-align:middle;}
+div.deleteBeneficiary{border:1px #ccc solid; border-radius:6px; padding:10px 0 10px 10px; clear:both; margin:15px 0 15px 0;}
+table.pinFormTable{border:none;}
+table.pinFormTable th{border-bottom: 0px; border-right: 0px;  width: 95px;padding-left: 10px; width: 94px;}
+table.pinFormTable td{border-bottom: 0px;}
+table.pinFormTable td.input{width: 25%;}
+p.pinerr{margin-bottom: 1px;}
+
+.btnSpace.transfarTop {margin-top:35px}
+
+/* PSA0001 スマホ認証端末の登録(認証含む) / PSA0002 スマホ認証端末の登録(入力) */
+.smartAppAuth{text-align:center; margin-bottom:10px;}
+.appsDl{float:left; width:380px; margin-bottom:40px;}
+.appsDl img{float:left; margin-right:10px;}
+.appsDl p{margin-bottom:10px;}
+#container .appsDl a:after{display:none;}
+.smartphoneAuthGuide{padding:10px 0 30px; text-align:center;}
+.smartphoneAuthGuide li{display:inline-block; padding:0 25px;}
+.downloadComplete{border:1px #ccc solid; border-radius:6px; margin-bottom:20px; text-align:center; display:block; padding:15px; font-size:18px; color:#000;}
+
+.authFunction{clear:both; margin-bottom:20px;}
+.authFunction:after{content:''; display:block; clear:both;}
+.authFunction div.input{float:left; overflow:hidden; width:430px;}
+.authFunction table{border:none; border-radius:0; width:100% !important;}
+.authFunction table td,
+.authFunction table th{border:none !important; background:none !important; background-color:transparent !important; padding:0 7px 0 0 !important;}
+.authFunction table.input th{color:#754c24; text-align:center; font-weight:bold;}
+.authFunction table.input td input{width:100px; height:25px;}
+.authFunction table.vKey{table-layout:fixed; width:auto !important;}
+.authFunction table.vKey td{padding:0 !important; text-align:center; width:28px;}
+.authFunction table.vKey td a{width:30px; height:30px; line-height:26px; display:block; background:#b3b3b3; font-weight:bold; font-size:16px; color:#000; text-align:center; text-decoration:none; border-width:2px; border-style:solid; border-color:#eee #eee #666 #666;}
+#container .authFunction table.vKey td a:after{display:none;}
+.authFunction div.grid{width:440px; float:right;}
+#container .authFunction div.grid{}
+.authFunction div.grid table{table-layout:fixed; border-collapse:collapse;}
+.authFunction div.grid th{background:#666 !important; color:#fff; font-weight:bold; text-align:center;}
+.authFunction div.grid td,
+.authFunction div.grid th{border:1px #ccc solid !important; text-align:center !important; padding:0 !important; height:35px; width:9%; border-collapse:collapse !important;} 
+.authFunction div.grid td.dark{background:#754c24 !important;}
+.authFunction div.grid td.light{background:#c69c6d !important;}
+#container table.appRegist,
+#container table.mailRegist{width:auto; margin-bottom:30px;}
+table.appRegist th{text-align:right; font-weight:normal;}
+table.mailRegist th{text-align:left; font-weight:normal;}
+#container table.appRegist{width:auto; margin-bottom:30px;}
+
+/* PEM0001 通知Eメール登録・変更 */
+table.nostyle.mailRegist th.gray{color:#tb3b3b3 !important;}
+.mailRegist input:invalid {box-shadow: none;}
+
+dl.credential{margin-bottom:20px;}
+dl.credential dt{display:inline;}
+dl.credential dd{display:inline; font-weight:bold; font-size:18px;}
+span.checkBoxLabel {font-size: 13px;}
+
+/* PEM0002 通知Eメール登録・変更確認 */
+div#dispMailId{width:430px; word-wrap:break-word; float:left;}
+
+/* PSA0004 スマホ認証端末の登録完了 */
+p.appsLink{padding:10px; text-align:center; margin-bottom:30px;}
+p.appsLink+.btnSpace{margin-bottom:30px;}
+
+/* PAI0001 口座情報 */
+.totalAmount small.total {margin-right: 10px;}
+.totalAmount.accountInfo{font-weight:bold;padding: 0 480px 0 60px;}
+table.balanceTable{font-size:14px; margin-bottom:30px;}
+table.balanceTable tr td:nth-child(1){width:215px;}
+table.balanceTable tr td:nth-child(2){width:178px;}
+table.balanceTable tr td:nth-child(3){width:auto;}
+table.balanceTable tr td:nth-child(4){width:170px;}
+table.balanceTable tr td:nth-child(5){width:250px;}
+table.balanceTable tr td button{width:65px; padding:0 5px;}
+table.balanceTable td:nth-child(2).money div:nth-child(1){float:right;width:26px; text-align:left;}
+table.balanceTable td:nth-child(2).money div:nth-child(2){float:right;}
+table.balanceTable a{margin-left:5px;}
+table.investmentTable{margin-bottom:30px; font-size:14px;}
+table.investmentTable tr td:nth-child(1){width:215px;}
+table.investmentTable tr td:nth-child(2){width:135px;}
+table.investmentTable tr td:nth-child(3){width:110px;}
+table.investmentTable tr td:nth-child(4){width:51px;text-align: center;}
+table.investmentTable tr td:nth-child(5){width:180px;}
+table.investmentTable tr td:nth-child(6){width:170px;}
+table.investmentTable tr td:nth-child(7){width:auto;}
+table.investmentTable td:nth-child(5).money div:nth-child(1){float:right;width:26px; text-align:left;}
+table.investmentTable td:nth-child(5).money div:nth-child(2){float:right;}
+table.loanTable{margin-bottom:30px; font-size:14px;}
+table.loanTable tr td:nth-child(1){width:215px;}
+table.loanTable tr td:nth-child(2){width:180px;}
+table.loanTable tr td:nth-child(3){width:180px;}
+table.loanTable tr td:nth-child(4){width:auto;}
+dl.total{border-left:5px #0d76af solid; padding-left:10px; margin-bottom:10px;}
+dl.total dt{display:inline-block; line-height:26px;}
+dl.total dd{font-size:24px; line-height:26px; font-weight:bold; display:inline-block; padding-left:30px;}
+dl.total dd div.unit small {font-size: 14px;}
+.balance dl.totalBalance dd p.accountInfo {padding-right: 100px;text-align: right;}
+
+
+/* PAI0002 入出金明細 */
+.balanceHead{border:0 none; margin:0;}
+.balanceHead th,
+.balanceHead td{border:0 none;}
+.balanceHead th{width:190px;}
+.balanceHead td.money{width:250px; font-size:26px;}
+.balanceHead td.money small{font-size:20px;}
+.balanceHead th.stepUp{text-align:right; width:280px;}
+.balanceHead td.stepUp{width:165px;}
+.balanceHead td.stepUp img{vertical-align:middle;}
+
+td.money.wd{font-weight:normal;}
+ul.selector.refiner{height:auto;}
+ul.selector.refiner li{width:120px; margin-bottom:15px;}
+ul.selector.refiner li.range{clear:left; margin-right:10px;}
+.rangeInput{height:30px; margin-bottom:20px;}
+.rangeInput input{height:30px; margin:0 5px; width:140px;}
+.rangeInput + div{clear:both;}
+p.dl{padding-top:5px; text-align:right;}
+#container p.dl a:after{display:none;}
+table.balanceDetails{}
+table.balanceDetails tr td:nth-child(1){width:120px;}
+table.balanceDetails tr td:nth-child(2){}
+table.balanceDetails tr td:nth-child(3){width:120px;}
+table.balanceDetails tr td:nth-child(4){width:120px;}
+table.balanceDetails tr td:nth-child(5){width:280px;}
+table th.accountBalance,
+table td.accountBalance{padding-top:5px;padding-bottom:5px;}
+
+div.transferConditions{padding-bottom:5px;}
+
+/* PTR0007 振込内容の確認（スマホ認証） */
+span.spAuthInfo {font-size:15px;}
+
+/* PFD0001 外貨普通預金 */
+table.exchangeRate{}
+table.exchangeRate tbody th img{width:30px; height:auto; vertical-align:middle; margin-right:10px; margin-bottom:1px;}
+table.exchangeRate tr th:nth-child(1){}
+table.exchangeRate tr td:nth-child(2),
+table.exchangeRate tr td:nth-child(3),
+table.exchangeRate tr td:nth-child(4){width:110px;}
+table.exchangeRate tr td:nth-child(5){width:180px;}
+table.exchangeRate tr td:nth-child(6){text-align:center;}
+table.exchangeRate button{width:65px; padding:0 5px;}
+span.fxDateMod {padding-right: 15px;}
+section.regular.table.foreignMoney {padding: 0px 25px;}
+
+/* PFD0002 外貨普通預金口座振替入力 / PFD0003 外貨普通預金口座振替確認 / PFD0004 外貨普通預金口座振替完了 */
+table.foreignDeposit em{display:inline-block; width:220px; font-weight:bold;}
+table.foreignDeposit td span{font-weight:bold;}
+table.foreignDeposit td span.fxrate{padding-right:10px; font-weight:normal; font-size:18px;}
+table.foreignDeposit td img{width:30px; height:auto; vertical-align:middle; margin-right:10px; margin-bottom:1.5px;}
+table.foreignDeposit tr th:nth-child(1){width:12%; padding-left: 10px;}
+table.foreignDeposit tr td:nth-child(2){width:50%; padding-left: 20px; padding-right: 5px;}
+table.foreignDeposit tr th:nth-child(3){width:15%; padding-left: 5px; padding-right: 5px;}
+table.foreignDeposit tr td:nth-child(4){width:23%; padding-right:5px;}
+table.foreignDeposit tr td.last{padding-right:5px;}
+table.foreignDeposit tr td.money{font-size:18px;}
+table.foreignDeposit tr td.refresh{border-bottom:0;}
+table.foreignDeposit tr td.refresh button.refresh, a.btn.refresh{line-height:41px; height:41px;}
+table.foreignDeposit tr td.money div:nth-child(1){float:right;width:26px; text-align:left;}
+table.foreignDeposit tr td.money div:nth-child(2){float:right;}
+
+table.foreignDeposit tr td.converted{border-right:1px #ccc solid; padding-right:15px; font-size:18px;}
+table.foreignDeposit tr td.rb0{border-right:0;}
+table.foreignDeposit tr td span.label{float:left;}
+ul.currencySelect{border:1px #ccc solid; border-radius:10px; padding:20px 20px 0px; clear:both; margin:0;}
+ul.currencySelect:after{content:''; clear:both; display:block;}
+ul.currencySelect li{width:20%; float:left; text-align:center; margin-bottom:15px; text-align:center; font-size:12px;}
+ul.currencySelect li img{width:60px; height:auto; display:block; margin:0 auto 5px;}
+ul.currencySelect li:nth-child(5n+1){clear:both;}
+ul.currencySelect li a{display:block};
+
+/* PRG0001 登録情報 各種設定TOP */
+.registTable .menuTable{}
+.registTable .menuTable th a{width:228px; height:64px; line-height:64px; display:block; vertical-align:baseline !important; text-align:center; background:#00a9dd; border-radius:5px; color:#fff; box-shadow: 0px 5px 1px -3px rgba(0,0,0,0.6); text-decoration:none;}
+section header.registrationInfo{margin-bottom:0px;}
+
+/* PPW0001 パスワード変更 */
+ul.progressBar.pwBar li{width:300px; background:url(../images/sprite_pc.png) no-repeat -690px -80px;}
+ul.progressBar.pwBar li.active{background:url(../images/sprite_pc.png) no-repeat -690px -40px;}
+ul.progressBar.pwBar li.left{width:300px; background:url(../images/sprite_pc.png) no-repeat -690px -200px;}
+ul.progressBar.pwBar li.activeleft{background:url(../images/sprite_pc.png) no-repeat -690px -160px;}
+
+/* PEM0001 通知Eメール登録・変更 */
+.emailInput {width:390px;}
+
+/* PLM0001 振込限度額変更 */
+.transMoney dl{}
+.transMoney dl{float:left; width:300px; margin-bottom:34px;}
+.transMoney dl dt{margin-bottom:5px;font-size:14px;}
+.transMoney dl:nth-child(1){width:205px; text-align:right;}
+.transMoney dl:nth-child(1) dd{font-size:20px; font-weight:bold;}
+.transMoney dl:nth-child(1) dd small{font-weight:normal;}
+.transMoney dl:nth-child(1) dd small.money {margin-left: 5px;}
+.transMoney dl:nth-child(2){width:400px; padding-left:63px; position:relative;}
+.transMoney dl:nth-child(2):before{content:""; width:18px; height:18px; position:absolute; top:42px; left:24px; background:url(../images/arrowPc.png) left no-repeat;} 
+.transMoney dl:nth-child(2) dd input{width:90%;}
+.transMoney dl:nth-child(2) dd small{font-weight:normal; font-size: 20px;}
+.transMoney dl:nth-child(2) dd small.inputNext {position: relative;top: 4px; margin-left: 5px;}
+.transMoney dl:nth-child(2) dd small.money {margin-left: 5px;}
+.transMoney .btnSpace{clear:both;}
+/* PLM0002 振込限度額変更確認 */
+.transMoney dl dd.conf{font-size:20px; font-weight:bold;}
+.transMoney dl dd.conf small{font-weight:normal;}
+
+
+/* pager */
+div.pager ul{text-align:center;}
+div.pager ul li{display:inline; padding:0 15px; font-size:13px;}
+div.pager ul li a,
+div.pager ul li span{display:inline-block;}
+div.pager ul li span{color:#909090;}
+#container div.pager{position:relative; padding:10px 0 0;}
+#container div.pager ul li a:before,
+#container div.pager ul li a:after,
+#container div.pager ul li span:before,
+#container div.pager ul li span:after{content:''; display:inline-block; height:10px; background:url(../images/sprite_pc.png) no-repeat;}
+#container div.pager ul li.first a:after{display:none;}
+#container div.pager ul li.first a:before{margin-right:5px; background-position:-180px 0; width:12px;} 
+#container div.pager ul li.prev a:after{display:none;}
+#container div.pager ul li.prev a:before{margin-right:5px; background-position:-140px 0; width:6px;}
+#container div.pager ul li.next a:after{margin-left:5px; background-position:-160px 0; width:6px;}
+#container div.pager ul li.last a:after{margin-left:5px; background-position:-200px 0; width:12px;}
+#container div.pager ul li.first span:before{margin-right:5px; background-position:-180px -10px; width:12px;} 
+#container div.pager ul li.prev span:before{margin-right:5px; background-position:-140px -10px; width:6px;}
+#container div.pager ul li.next span:after{margin-left:5px; background-position:-160px -10px; width:6px;}
+#container div.pager ul li.last span:after{margin-left:5px; background-position:-200px -10px; width:12px;}
+#container div.pager p.dl{position:absolute; right:0; top:5px; font-size:13px;}
+
+
+
+
+/* datepicker */
+input.datepicker.select{background:url(../images/icnCalendar_pc.png) no-repeat right center #fff;}
+input.datepicker{background:#eee;}
+#ui-datepicker-div{z-index:10000 !important; background:#fff; padding:10px; box-shadow:0 0 5px rgba(0,0,0,.2); border-radius:5px;display: none;}
+.ui-datepicker-calendar{background:#fff; text-align:center; margin:0;}
+.ui-datepicker-calendar th,
+.ui-datepicker-calendar td{padding:5px; text-align:center;}
+.ui-datepicker-header{position:relative; background:#fff; height:30px;}
+.ui-datepicker-title{text-align:center; line-height:30px;}
+.ui-datepicker-prev,
+.ui-datepicker-next{position:absolute; height:30px; line-height:30px; top:0;}
+.ui-datepicker-prev{left:0;}
+.ui-datepicker-next{right:0; text-align:right;}
+.ui-datepicker-prev,
+.ui-datepicker-next{text-decoration:underline; color:#00a9dd;}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover{text-decoration:none;}
+.ui-datepicker-prev.ui-state-disabled,
+.ui-datepicker-next.ui-state-disabled{display:none;}
+
+table.ui-datepicker-calendar tbody tr:nth-child(even) th,
+table.ui-datepicker-calendar tbody tr:nth-child(even) td{background:none transparent;}
+.ui-datepicker-today{background:#9CF;}
+
+.ui-datepicker-calendar th.ui-datepicker-week-end{background:#FABABA;}
+.ui-datepicker-calendar td.ui-datepicker-week-end,
+table.ui-datepicker-calendar tbody tr:nth-child(even) td:first-child.ui-datepicker-week-end{background:#FEEFEF;}
+
+
+.ui-datepicker-calendar tr th:last-child.ui-datepicker-week-end{background:#6DABD8;}
+.ui-datepicker-calendar tr td:last-child.ui-datepicker-week-end{background:#DCF0F5;}
+.ui-datepicker-calendar tr td:first-child a:link,
+.ui-datepicker-calendar tr td:first-child a:visited{color:#B80E0E;}
+
+.ui-datepicker-calendar tbody tr:nth-child(odd) td.holiday,
+.ui-datepicker-calendar tbody tr:nth-child(even) td.holiday{background:#FEEFEF;}
+.ui-datepicker-calendar td.holiday a:link,
+.ui-datepicker-calendar td.holiday a:visited{color:#B80E0E;}
+
+.ui-datepicker-calendar td.ui-state-disabled{background:#f9f9f9 !important; color:#ccc !important;}
+
+/*high-contrastモード*/
+@media (-ms-high-contrast: active) {
+	.authFunction div.grid td.dark{background:#56b4e9 !important;}
+	.authFunction div.grid td.light{background:#e69f00 !important;}
+}

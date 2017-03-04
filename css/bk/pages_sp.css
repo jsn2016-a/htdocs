@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* basic color scheme
+=================================================== */
+/*
+main > #00a9dd > Blue
+sub  > #007ab9 > Navy
+back > #f2f2f2 > Pale Gray
+dark > #8c8c8c > Gray
+text > #585858
+border(form/table) > #ccc
+heading/label > #000
+*/
+
+
+/* MLG0001 ログイン */
+body.login #siteHeader{margin-bottom:15px; height:45px;}
+body.login .loginPanel .table{margin:0 -15px;}
+body.login .loginPanel table{width:100%; border:none; margin:0;}
+body.login .loginPanel table th,
+body.login .loginPanel table td{padding:0; white-space:nowrap; border:none; background:transparent; vertical-align:middle;}
+body.login .loginPanel table th{padding:6px 0 0 15px; border:none; line-height:1.2; background:url(../images/ltBorder_sp.png) no-repeat left center;}
+body.login .loginPanel table td{padding:6px 15px 6px 5px;}
+body.login .loginPanel table td input{width:100%;}
+body.login .loginPanel table tr:first-child{background:#f2f2f2;}
+body.login .loginPanel .oldSys{text-align:center; padding:10px 0;}
+body.login ul{border-top:1px #ccc solid;}
+body.login ul li{border-bottom:1px #ccc solid; text-align:center;}
+body.login ul li a{padding:10px; display:block;}
+.dummyText{width:2px;height:2px;position:absolute;opacity:0}
+
+/* MTP0001 トップ */
+body.top header{margin-top:1px;}
+body.top .totalAmount{font-size:20px; font-weight:bold; padding:5px 15px; text-align:right; color:#000;}
+body.top .totalAmount small{font-size:14px; font-weight:normal;}
+body.top .stepup{}
+body.top .stepup table th{font-size:12px;}
+body.top .stepup table td{text-align:center; padding-bottom:10px;}
+body.top .stepup table td{font-size:18px; font-weight:bold;text-align: right;}
+body.top .stepup table td small{font-size:10px; font-weight:normal;}
+body.top .stepup table td.stage{padding: 10px 10px 0px 10px;}
+body.top .stepup .btmLinks{clear:both; background:#f2f2f2;}
+body.top .stepup .btmLinks li{text-align:center; border-bottom:1px #ccc solid;}
+body.top .stepup .btmLinks li a{padding:10px; display:block;}
+#siteInfo .exchangeRate{}
+#siteInfo .exchangeRate header{background:#007ab9; padding:5px; text-align:center; margin:0;}
+#siteInfo .exchangeRate .inner{padding:10px 15px; border-bottom:1px #ccc solid;}
+#siteInfo .exchangeRate table,
+#siteInfo .exchangeRate table th,
+#siteInfo .exchangeRate table td{ border:none; background:none; padding:5px 0;}
+#siteInfo .exchangeRate table th{padding:0;}
+#siteInfo .exchangeRate table tr th:first-child{text-align:left; padding-left:30px;}
+#siteInfo .exchangeRate table tr th:last-child{text-align:right; padding-right:30px;}
+#siteInfo .exchangeRate table td img{vertical-align:middle; margin-right: 10px; margin-bottom:1px;}
+#siteInfo .exchangeRate table td em{font-size: 18px;font-weight: bold;}
+#siteInfo .exchangeRate table td:last-child{font-weight:bold; text-align:right; font-size:14px;}
+#siteInfo .exchangeRate table td:last-child small{font-weight:normal; font-size:12px;}
+#siteInfo .exchangeRate p{text-align:center; padding:0;}
+#siteInfo .exchangeRate p a{display:block; padding:15px;}
+#siteInfo .guide{margin:10px 15px 15px;}
+#siteInfo .guide li{border-bottom:1px #ccc solid; padding:10px 0; text-align:center; font-size:13px;}
+#siteInfo .guide li a{text-decoration:none;}
+#siteInfo .guide li a:after{content:''; display:inline-block; width:13px; height:12px; margin-left:5px; background:url(../images/sprite_sp.png) no-repeat -40px 0; background-size:500px auto; vertical-align:middle; position:relative; top:-2px;}
+#siteInfo .guide .external li a:after{content:''; display:inline-block; width:13px; height:12px; margin-left:5px; background:url(../images/sprite_sp.png) no-repeat -60px 0; background-size:500px auto; vertical-align:middle; position:relative; top:-2px; right:-2px;}
+#siteInfo .guide li a:hover{text-decoration:underline;}
+#siteInfo .guide li.notice{text-align:left; padding-left:50px; position:relative;}
+#siteInfo .guide li.notice:before{content:''; display:block; width:40px; height:40px; background:url(../images/sprite_sp.png) no-repeat -380px 0; background-size:500px auto; position:absolute; left:0; top:50%; margin-top:-20px;}
+#siteInfo .guide li.notice a:after{display:none;}
+#siteInfo .data{padding:0 15px 15px;}
+#siteInfo .data li{margin-bottom:7px; font-size:13px;}
+#siteInfo .data li a{width:100%;}
+.powercall{text-align:center; padding:0 15px; color:#8c8c8c; font-weight:bold;}
+.powercall a{border:1px #8c8c8c solid; border-radius:4px; color:#8c8c8c; font-size:18px; display:block; padding:5px; margin:10px 0;}
+.powercall a:before{content:''; display:inline-block; width:28px; height:16px; background:url(../images/sprite_sp.png) no-repeat -60px -20px; background-size:500px auto; margin-right:5px; vertical-align:middle; position:relative; top:-2px;}
+.exchangeRate div.yen {float: right;margin-left: 5px;margin-top: 4px;}
+
+/* MTR0001 振込TOP / MTR0002 振込先口座選択 */
+section.balance ul.btns{padding:15px 15px 5px;}
+section.balance ul.btns li{margin-bottom:10px;}
+table.history th{line-height:1.2; color:#000;}
+table.history.bank th{width: 71%;}
+table.history th i{font-weight:bold;}
+
+/* balance table */
+.balanceTable{border-top:1px #ccc solid;}
+.balanceTable td{text-align:right; color:#000; font-weight:bold; font-size:18px;}
+.balanceTable.bank td{text-align:right; color:#000; font-weight:bold; font-size:14px; padding:5px 4px 5px 0px;}
+.balanceTable td p small{font-size:10px; font-weight:normal;}
+.balanceTable td li{display:inline-block; margin:0 0 0 10px; font-weight:normal; font-size:10px;}
+.balanceTable th{padding:5px 0 5px 15px; line-height:1.2; background-image:url(../images/ltBorder_sp.png); background-repeat:no-repeat; background-position:left center; background-size:5px 75%; white-space:nowrap;}
+.balanceTable.bank th{width: 50%;}
+.balanceTable tr td:nth-child(2){font-weight:bold; text-align:right;}
+.balanceTable tr td:nth-child(2) small{font-size:10px; font-weight:normal;}
+.balanceTable tr td {padding-top:0px;padding-bottom:0px;}
+.balanceTable th .title{font-size: 11px;}
+
+
+/* transfet table */
+.transferInfo{border-top:1px #ccc solid;}
+.transferInfo td{color:#000; vertical-align:middle;}
+.transferInfo th{padding:15px 10px 15px 15px; line-height:1.2; background-image:url(../images/ltBorder_sp.png); background-repeat:no-repeat; background-position:left center; background-size:5px 75%; white-space:nowrap; vertical-align:middle;}
+.transferInfo td button{width:60px; display:inline; vertical-align:middle;}
+.transferInfo td span{display:inline-block;}
+.transferInfo td span.bankOrBranch{padding-top: 4px;}
+.transferInfo.confirm td{text-align:right; font-weight:bold;}
+.transferInfo.confirm td small{font-size:10px;}
+.transferInfo.confirm td.money{font-size:16px; font-weight:bold;}
+.transferInfo.zebra.exchange div.yen {float: right;margin-left: 5px;margin-top: 4px;}
+
+/* transfer table */
+.transferTable td{font-size:16px; font-weight:bold; text-align:right;}
+.transferTable td small{font-size:10px; font-weight:normal;}
+
+/* account information table */
+.accountInfoTable th,
+.accountInfoTable td{border:none; padding:2px 0px; line-height:1.1;}
+.accountInfoTable th{font-size:10px;}
+.accountInfoTable th.header{font-size:11px; padding:10px 5px 10px 10px!important; background-image:url(../images/ltBorder2_sp.png) !important; background-repeat:no-repeat !important; background-position:left center !important; background-size:5px 75% !important; width:125px;}
+.accountInfoTable tr td{padding-right:15px; text-align:right; color:#000; font-weight:bold;}
+.accountInfoTable tr td em{font-size:16px; font-weight:bold;}
+.accountInfoTable tr td small{font-size:10px;}
+.accountInfoTable ul{text-align:right;}
+.accountInfoTable ul li{display:inline-block; margin-left:10px; font-size:10px;}
+.accountInfoTable tr.even{background:#f2f2f2;}
+
+/* 2 */
+.accountInfoTable.r2 tr:nth-child(2n) th,
+.accountInfoTable.r2 tr:nth-child(2n) td{padding-bottom:10px;}
+.accountInfoTable.r2 tr:nth-child(2n+1) th,
+.accountInfoTable.r2 tr:nth-child(2n+1) td{padding-top:10px;}
+.accountInfoTable.r2 tr:nth-child(2n+1) th,
+.accountInfoTable.r2 tr:nth-child(2n+1) td{border-top:1px #ccc solid;}
+
+/* 3 */
+.accountInfoTable.r3 tr:nth-child(3n) th,
+.accountInfoTable.r3 tr:nth-child(3n) td{padding-bottom:10px;}
+.accountInfoTable.r3 tr:nth-child(3n+1) th,
+.accountInfoTable.r3 tr:nth-child(3n+1) td{padding-top:10px;}
+.accountInfoTable.r3 tr:nth-child(3n+1) th,
+.accountInfoTable.r3 tr:nth-child(3n+1) td{border-top:1px #ccc solid;}
+/* 4 */
+.accountInfoTable.r4 tr:nth-child(4n) th,
+.accountInfoTable.r4 tr:nth-child(4n) td{padding-bottom: 5px;padding-top: 5px;}
+.accountInfoTable.r4 tr:nth-child(4n+1) th,
+.accountInfoTable.r4 tr:nth-child(4n+1) td{padding-top:10px;}
+.accountInfoTable.r4 tr:nth-child(4n+1) th,
+.accountInfoTable.r4 tr:nth-child(4n+1) td{border-top:1px #ccc solid;}
+
+/* 5 */
+.accountInfoTable.r5 tr:nth-child(5n) th,
+.accountInfoTable.r5 tr:nth-child(5n) td{padding-bottom:10px;}
+.accountInfoTable.r5 tr:nth-child(5n+1) th,
+.accountInfoTable.r5 tr:nth-child(5n+1) td{padding-top:10px;}
+.accountInfoTable.r5 tr:nth-child(5n+1) th,
+.accountInfoTable.r5 tr:nth-child(5n+1) td{border-top:1px #ccc solid;}
+
+/* MAI0002 入出金明細 */
+ul.selector.refiner{height:auto; width:100%; width:-webkit-calc(100% + 10px); width:calc(100% + 10px); position:relative; z-index:2;font-size: 11px;}
+ul.selector.refiner li{width:30%; width:-webkit-calc(33.33% - 10px);width:calc(33.33% - 10px); margin:0 10px 10px 0;}
+ul.selector.refiner li.range{clear:left; margin-right:10px;}
+.rangeInput{height:60px; margin-bottom:10px;  padding-left:34%; padding-left:-webkit-calc(33.3% + 5px); padding-left:calc(33.3% + 5px); clear:both; float:left; margin-top:-34px; position:relative; z-index:0;}
+.rangeInput:after{content:''; display:block; clear:both;}
+.rangeInput input{height:24px; margin:0 0 10px; width:160px;}
+.rangeInput + div{clear:both;}
+button.transferConditions{width:140px;}
+
+span.lineItemListDate{font-size:9px;}
+span.lineItemListSummary{font-size:11px;}
+span.lineItemListMoney{font-size:17px;}
+table td.money small.lineItemListUit{font-size:9px; margin-left: 5px;}
+
+/* MTR0003 振込先情報の入力 */
+button.bankOrBranchSelButton{float:right;}
+button.beneficiaryAccountTypeBtn{background: #ccc;border: 1px #e4e4e4 solid;box-shadow: none;color: #585858; margin-right:calc((100% - 180px)/2); float:left;}
+button.beneficiaryAccountTypeBtn.active{background: #fff;border: 2px #00a8de solid;}
+button.beneficiaryAccountTypeBtn:disabled{color:#bbb; box-shadow:none; background:#eee; cursor:default; border: none;}
+button.beneficiaryAccountTypeBtn.last{margin-right:0px; float:right;}
+
+/* MTR0003 振込先情報の入力  modal */
+ul.bankList{clear:both; margin:10px 0 20px;}
+ul.bankList:after{content:''; display:block; clear:both;}
+ul.bankList li{width:50%; padding:0 5px; float:left; margin-bottom:10px;}
+ul.bankList li a{width:100%; height:25px; line-height:25px; font-size:12px; background:#00a9dd;}
+.searchBox{padding: 5px 60px 5px 5px; width:100%; position:relative;}
+.searchBox input{width:100%;}
+.searchBox button{margin-top: 4px; width:60px; border-radius:0 4px 4px 0; height:30px; line-height:30px; position:absolute; right:0; top:0; background:#00a9dd;}
+ul.bankSearchResult{border:1px #ccc solid; border-radius:6px; padding:10px; clear:both; margin:10px 0 0 0;}
+ul.bankSearchResult li{margin-bottom:10px;}
+ul.branchSearchResult{border:1px #ccc solid; border-radius:6px; padding:10px; clear:both; margin:10px 0 0 0;}
+ul.branchSearchResult li{margin-bottom:10px;}
+
+/* MTR0010 振込状況照会・取消 */
+div.balanceInquires{clear:both;}
+div.balanceInquires header{background:#b3b3b3; color:#000;}
+div.balanceInquires thead{border-bottom:1px #ccc solid;}
+div.balanceInquires thead th,
+div.balanceInquires thead td{font-size:12px; width: 50%;}
+div.balanceInquires td{text-align:right; color:#000;}
+div.balanceInquires th,
+div.balanceInquires td{border:0 none; padding:5px 0; font-size:12px;}
+div.balanceInquires thead th em{font-weight:bold; color:#000;}
+div.balanceInquires thead td{font-weight:bold; font-size:16px;}
+div.balanceInquires thead td small{font-size:12px; font-weight:normal;}
+div.balanceInquires td button{width:60px; height:27px; line-height:27px; font-size:14px; margin-bottom:10px;}
+div.balanceInquires .deal{padding:0 15px;}
+div.balanceInquires tbody th,
+div.balanceInquires tbody td{padding:5px 0px 0px 0px; word-break: break-all;}
+div.balanceInquires tbody tr:last-child th,
+div.balanceInquires tbody tr:last-child td{padding:5px 0;}
+div.modalDeleteBeneficary{border:1px #ccc solid; border-radius:6px; padding:10px 10px 10px 10px; clear:both; margin:1px 15px 15px 15px; line-height:1;}
+table.deleteBeneficary tr:nth-child(1){text-align:right;}
+table.deleteBeneficary tr:nth-child(2){border-style: none; text-align:right;}
+table.deleteBeneficary tr:nth-child(3){border-style: none; text-align:right;}
+table.deleteBeneficary tr:nth-child(4){border-style: none; text-align:right;}
+table.deleteBeneficary tr:nth-child(5){border-style: none; text-align:right;}
+table.deleteBeneficary tr:nth-child(6){border-style: none; text-align:right;}
+table.deleteBeneficary tr:nth-child(7){border-style: none; text-align:right;}
+table.deleteBeneficary tr th{border-bottom-width:0px;}
+table.deleteBeneficary tr th:nth-child(1){width:40%;}
+table.deleteBeneficary tr td{border-bottom-width:0px;}
+p.pinerr{margin-bottom: 1px;}
+table.pinFormTable th{border-bottom: 0px; padding-left: 30px; width: 95px;}
+table.pinFormTable td{border-bottom: 0px}
+table.pinFormTable td.input{width: 80%; margin-top: 2px;}
+table.modalbutton td{width: 50%;}
+table.modalbutton td button{height: 40px; vertical-align: middle; margin-bottom: 30px;}
+
+/* MTR0011 振込先口座の登録・削除 */
+section p.odd{background:#f2f2f2; border-bottom:1px #ccc solid;}
+.registeredAccounts th em{font-weight:bold;}
+.registeredAccounts td{width:90px;}
+
+/* MFD0001 外貨普通預金 */
+.exchangeRate{}
+.exchangeRate .item{}
+.exchangeRate .item .header{background:#e6e6e6; color:#000; padding:7px 10px; clear:both;}
+.exchangeRate .item .header:after{content:''; display:block; clear:both;}
+.exchangeRate .item .header p{margin:0; padding:3px 0 0 0; float:left;}
+.exchangeRate .item .header img{width:auto; height:24px; vertical-align:middle;padding-right: 10px; margin-bottom:1px;}
+.exchangeRate table{color:#000;}
+tr th.foreignCurrencyRate {width:50%}
+tr td.foreignCurrencyRate {width:50%}
+
+button.foreignCurrencyRate,
+a.btn.foreignCurrencyRate,
+.btns a.foreignCurrencyRate{color:#fff; border-radius:4px; box-shadow:1px 1px 2px rgba(0,0,0,.3); display:block; text-align:center; text-decoration:none; position:relative; text-align:center; border:none; cursor:pointer; width:100%; height:40px; margin:0 auto; line-height:40px;
+background: #4dc3e7;
+background: -moz-linear-gradient(top,  #79c3f8 0%, #79c3f8 48%, #3fa9f5 52%, #3fa9f5 100%);
+background: -webkit-linear-gradient(top,  #79c3f8 0%,#79c3f8 48%,#3fa9f5 52%,#3fa9f5 100%);
+background: linear-gradient(to bottom,  #79c3f8 0%,#79c3f8 48%,#3fa9f5 52%,#3fa9f5 100%);
+}
+button.foreignCurrencyRate.fxbuy,
+a.btn.foreignCurrencyRate.fxbuy,
+.btns a.foreignCurrencyRate.fxbuy{color:#fff; border-radius:4px; box-shadow:1px 1px 2px rgba(0,0,0,.3); display:block; text-align:center; text-decoration:none; position:relative; text-align:center; border:none; cursor:pointer; width:100%; height:40px; margin:0 auto; line-height:40px;
+background: #ef4a4b;
+background: -moz-linear-gradient(top,  #ef4a4b 0%, #ef4a4b 48%, #ce3434 52%, #ce3434 100%);
+background: -webkit-linear-gradient(top,  #ef4a4b 0%,#ef4a4b 48%,#ce3434 52%,#ce3434 100%);
+background: linear-gradient(to bottom,  #ef4a4b 0%,#ef4a4b 48%,#ce3434 52%,#ce3434 100%);
+}
+
+/*
+.exchangeRate .item .header button{float:right; width:110px; height:30px; line-height:27px; padding-left:22px;}
+*/
+.exchangeRate .item .header a.refresh{float:right; height:30px; line-height:30px; display:inline-block;}
+
+.exchangeRate .item td{border:1px #ccc solid; border-width:0 1px 1px 0; font-size:16px;}
+.exchangeRate .item tr td:last-child{border-right:0;}
+.exchangeRate .item ul{padding:10px 15px 15px; text-align:center;}
+.exchangeRate .item ul li{display:inline-block; margin:0 5px; width:80px;}
+.exchangeRate .item ul li button{height:30px; line-height:28px;}
+td.money em{font-size:18px; font-weight:bold;}
+span.dateModified {float: right;}
+
+/* MFD0002 外貨普通預金口座振替入力 */
+table.transferInfo.exchange{}
+table.transferInfo.zebra.exchange{border-top-width: 0px;}
+table.transferInfo.exchange p{color:#000; text-align:right; margin:5px 0; padding:0; line-height:27px;}
+table.transferInfo.exchange p img{height:22px; width:auto; vertical-align:middle; margin-right:10px; margin-bottom:1.5px;}
+table.transferInfo.exchange button{float:right; width:120px; margin:0 0 10px;}
+table.transferInfo.exchange th{width:38%;}
+table.transferInfo.exchange.account th{width: 25%;}
+table.transferInfo.exchange.even tr th{background:url(../images/ltBorder3_sp.png) no-repeat left center #f2f2f2; background-size:5px 75%;}
+table.transferInfo.exchange.even tr td{background-color: #f2f2f2;}
+table.transferInfo.exchange .money{font-size:14px;}
+table.transferInfo.exchange .money span{display:initial;}
+table.transferInfo.exchange .wUnit{width:85%;}
+table.transferInfo.exchange+table{border-top:10px #007ab9 solid;}
+ul.currencySelect{border:1px #ccc solid; border-radius:5px; padding:10px;}
+ul.currencySelect li{line-height:20px; margin-bottom:5px;}
+ul.currencySelect li img{width:auto; height:20px; margin-right:5px; vertical-align:middle;}
+ul.currencySelect li a{display:block};
+
+/* MFD0003 外貨普通預金口座振替確認 */
+table.transferInfo.exchange th.top{background:none;}
+table.transferInfo.exchange.confirm.even tr th{background:url(../images/ltBorder_sp.png) no-repeat left center #f2f2f2; background-size:5px 75%;}
+table.transferInfo.exchange.confirm td img{height:22px; width:auto; vertical-align:middle; margin-right:10px;}
+table.transferInfo.exchange.confirm td button{clear:both; width:120px; font-weight:normal; height:32px; line-height:32px; float:none; margin-top:5px;}
+table.transferInfo.exchange.confirm td.money span{font-size:18px; font-weight:bold; display:initial;}
+
+/* MEM0001 通知Eメール登録・変更 */
+table.registForm tr th.gray{background:url(../images/ltBorder3_sp.png) no-repeat left center; background-size:5px 75%; }
+.mailRegist .transferInfo.registForm{margin-bottom:0px !important;}
+.mailRegist .rt{padding-right:10px;}
+.mailRegist .mailBtn{padding:20px 20px 15px 13px;}
+span.checkBoxLabel {font-size: 11px;}
+
+/* MEM0002 通知Eメール登録・変更確認 */
+div#dispMailId{word-break: break-all; float: left;}
+
+/* MLM0001 振込限度額変更 */
+.transferInfo tr.arrow{background:none;}
+.transferInfo tr.arrow th,
+.transferInfo tr.arrow td{padding:0px;  padding-right:8px; }
+.transferInfo tr.arrow th{background:none; line-height:1.0;}
+.transferInfo td.rt img{margin-right:60px;}
+.transferInfo.registForm td.money{font-size:18px; font-weight:normal;}
+
+
+/* MSA0001 スマホ認証端末の登録(認証含む) */
+.linkList{background:#f2f2f2;}
+.linkList li{border-top:1px #ccc solid; text-align:center;}
+.linkList li a{padding:10px; display:block;}
+label.appDl{font-size:11px; text-align:center; font-weight:bold; display:block; padding:10px 0;}
+
+/* MSA0002 スマホ認証端末の登録(入力) */
+.transferInfo.registForm{border-top:none; margin:5px 0 15px;}
+.transferInfo.registForm th,
+.transferInfo.registForm td{border:0 none;}
+.transferInfo.registForm tr.regst td{padding:0px;}
+.pushMsg{text-align:center; padding:40px 10px 30px; font-size:11px; color:#000; max-height:200px; overflow-y: auto; background:none;} 
+.pushMsg p{margin-bottom:20px;}
+.pushMsg em{font-size:18px; font-weight:bold;}
+
+/* MSA0004 スマホ認証端末の登録完了 */
+dl.credential{padding:0 15px 15px 0; clear:both;}
+dl.credential:after{clear:both; content:''; display:block;}
+dl.credential dt{background:url(../images/ltBorder_sp.png) no-repeat left center; background-size:5px 75%; padding:10px 0 10px 15px; float:left; line-height:1.4;}
+dl.credential dd{line-height:50px; float:right; font-size:16px; text-align:right; font-weight: bold;}
+dl.credential.registerd{margin-top:10px; padding-bottom:0;}
+dl.credential.registerd dt{line-height:50px; padding:0 0 0 15px;}
+dl.credential.conf{margin-top:0; padding-bottom:20px;}
+dl.credential.conf dt{line-height:50px; padding:0 0 0 15px;}
+p.appsLink{background:#f2f2f2; padding:10px 0; text-align:center;}
+
+/* MSA0005 スマホ認証端末の解除(認証含む) */
+.authFunction div.input{background:url(../images/ltBorder_sp.png) no-repeat left center; background-size:5px 75%; padding:10px 15px 20px 15px; float:left; line-height:1.4;width: 100%;}
+.authFunction div.input table{border:none; border-radius:0;}
+.authFunction div.input table td,
+.authFunction div.input table th{border:none !important; background:none !important; background-color:transparent !important; padding:0 20px 0 0 !important; text-align:center;}
+.authFunction div.input table th{color:#754c24; text-align:center; font-weight:bold;}
+.authFunction div.input table td input{width:80px; height:25px;}
+
+.authFunction div.grid{padding:0 15px;}
+.authFunction div.grid table{table-layout:fixed; border-collapse:collapse; margin-bottom:20px;}
+.authFunction div.grid th{background:#666 !important; color:#fff; font-weight:bold; text-align:center;}
+.authFunction div.grid td,
+.authFunction div.grid th{border:1px #ccc solid !important; text-align:center !important; padding:0 !important; height:25px; width:9%; border-collapse:collapse !important;} 
+.authFunction div.grid td.dark{background:#754c24 !important;}
+.authFunction div.grid td.light{background:#c69c6d !important;}
+span.credentialId {font-size:16px}
+
+
+
+/* datepicker */
+input.datepicker.select{background:url(../images/icnCalendar_sp.png) no-repeat right center #fff; background-size:18px 15px;font-size: 11px;}
+input.datepicker{background:#eee;font-size: 11px;}
+#ui-datepicker-div{z-index:10000 !important; background:#fff; padding:10px; box-shadow:0 0 5px rgba(0,0,0,.2); border-radius:5px; width:80% !important; left:10% !important; font-size:16px;display: none;}
+.ui-datepicker-calendar{background:#fff; text-align:center; margin:0;}
+.ui-datepicker-calendar th,
+.ui-datepicker-calendar td{padding:4px; text-align:center; font-size:16px; border:1px #ccc solid;}
+.ui-datepicker-today{background:#9CF;}
+.ui-datepicker-header{position:relative; background:#fff; height:30px;}
+.ui-datepicker-title{text-align:center; line-height:30px;}
+.ui-datepicker-prev,
+.ui-datepicker-next{position:absolute; height:30px; line-height:30px; top:0;}
+.ui-datepicker-prev{left:0;}
+.ui-datepicker-next{right:0; text-align:right;}
+.ui-datepicker-prev,
+.ui-datepicker-next{text-decoration:underline; color:#00a9dd;}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover{text-decoration:none;}
+.ui-datepicker-prev.ui-state-disabled,
+.ui-datepicker-next.ui-state-disabled{display:none;}
+.ui-datepicker-calendar th{background:#007AB9; color:#fff;}
+
+.ui-datepicker-calendar th.ui-datepicker-week-end{background:#FABABA;}
+.ui-datepicker-calendar td.ui-datepicker-week-end{background:#FEEFEF;}
+
+.ui-datepicker-calendar tr th:last-child.ui-datepicker-week-end{background:#6DABD8;}
+.ui-datepicker-calendar tr td:last-child.ui-datepicker-week-end{background:#DCF0F5;}
+.ui-datepicker-calendar tr td:first-child a:link,
+.ui-datepicker-calendar tr td:first-child a:visited{color:#B80E0E;}
+
+.ui-datepicker-calendar tbody tr:nth-child(odd) td.holiday,
+.ui-datepicker-calendar tbody tr:nth-child(even) td.holiday{background:#FEEFEF;}
+.ui-datepicker-calendar td.holiday a:link,
+.ui-datepicker-calendar td.holiday a:visited{color:#B80E0E;}
+
+.ui-datepicker-calendar td.ui-state-disabled{background:#f9f9f9 !important; color:#ccc !important;}
+
+/* MAI0001 口座情報 */
+.accountInfoTable tr td.accountAmount{text-align: right;padding-right: 5px;}
+.accountInfoTable tr td.accountAmount.nomal{text-align: right;padding-right: 5px;font-weight: normal;}
+.accountInfoTable tr td.accountUnit{text-align: left;font-weight: normal;padding-right: 3px;}
+.accountInfoTable tr td.accountUnit.unitPosition {position: relative;left: -15px;text-align: left;}
+section p.accountBalance{padding: 5px 8px 0px 0px;}
+
+/* MPW0001 パスワード変更 */
+table td.pwDirectPw {padding: 8px 10px;}
+
+/* MLG0005 */
+section.logout{margin-top: 20px;}
+
+/*high-contrastモード*/
+@media (-ms-high-contrast: active) {
+	.authFunction div.grid td.dark{background:#56b4e9 !important;}
+	.authFunction div.grid td.light{background:#e69f00 !important;}
+}

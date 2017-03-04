@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html ng-app="cameraApp" ng-controller="indexCtrl as index">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex,noarchive">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<title page-title></title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon-144x144.png">
+<!-- 
+	<link rel="stylesheet" type="text/css" ng-href="css/styles.css">
+ -->
+	
+	<link rel="stylesheet" type="text/css" ng-href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" ng-href="css/common.css">
+	
+	<script src="js/lib/angular.js"></script>
+	<script src="js/lib/angular-ui-router.js"></script>
+	<script src="js/lib/jquery-1.10.2.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+	<script src="js/lib/scripts_sp.js"></script>
+	<!--
+	-->
+	
+</head>
+<body>
+	<div id="wrapper">
+		<header id="siteHeader" ui-view="header"></header>
+		<div id="container" ui-view="container"></div>
+		<footer id="siteFooter" ui-view="footer"></footer>
+	</div>
+	<div class="pgTop"><a href="#wrapper"></a></div>
+
+	<!--
+	<script src="js/service/utility.js"></script>
+	-->
+	<script src="js/cameraApp.js"></script>
+	
+	<script src="js/controller/index.js"></script>
+	<script src="js/controller/camera_roll.js"></script>
+	<script src="js/controller/select_group.js"></script>
+	<script src="js/controller/ishizawa.js"></script>
+	<script src="js/controller/igarashi.js"></script>
+	<script src="js/controller/header.js"></script>
+	<script src="js/controller/footer.js"></script>
+</body>
+
+</html>
