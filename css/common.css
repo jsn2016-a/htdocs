@@ -50,6 +50,27 @@ div.pictureList{height: 102px;width: 100%;overflow: auto;white-space: nowrap;mar
 .pictureList li{display:inline;}
 .pictureList li img{width: 100px; height:100px;}
 
+div#operation {width:100%;}
+div#operation .operationButtonSpace{float:left; width:33%; height: 50px;}
+div#operation .operationButtonSpace.last{width:34%;}
+
+div#operation .operationButton{width: calc(100% - 24px);height: 36px;position: relative;top: 8px;left: 12px;}
+
+div#operation .operationButton.add{background-color: #55d2f6;}
+div#operation .operationButton.edit{background-color: #55f679;}
+div#operation .operationButton.remove{background-color: #f67955;}
+
+div#confirmForm {width:100%;}
+div#confirmForm .confirmSpace{float:left; width:50%; height: 50px;}
+
+div#confirmForm .confirmButton{width: calc(100% - 24px);height: 36px;position: relative;top: 8px;left: 12px;}
+
+div#confirmForm .confirmButton.cancel{background-color: #55d2f6;}
+div#confirmForm .confirmButton.ok{background-color: #55f679;}
+
+.menberList li{list-style:none;height:35px;background-color:lightblue;font-weight:400;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:6px 12px;font-size:14px;line-height:1.428571429;border-radius:4px; margin-bottom: 8px;}
+
+
 /* サブメニュー */
 #siteHeader .logout{position:absolute; right:15px; top:16px; text-align:right; font-size:10px;}
 #siteHeader .logout a:before{content:''; display:inline-block; width:13px; height:15px; margin-right:2px; background:url(../images/sprite_sp.png) no-repeat -100px 0; background-size:500px auto; vertical-align:middle;}
