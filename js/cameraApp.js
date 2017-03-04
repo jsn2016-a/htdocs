@@ -85,7 +85,23 @@ angular.module('cameraApp',[
 				}
 			}
 		})
-
+		.state('groupAdd',{
+			url: '/add/group',
+			views: {
+				'header': {
+					templateUrl: 'view/header.html',
+					controller: 'headerCtrl',
+				},
+				'container': {
+					templateUrl: 'view/add_group.html',
+					controller: 'addGroupCtrl'
+				},
+				'footer': {
+					templateUrl: 'view/footer.html',
+					controller: 'footerCtrl'
+				}
+			}
+		})
 	}
 ])
 ;

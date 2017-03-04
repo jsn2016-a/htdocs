@@ -24,11 +24,14 @@ $(function(){
 	});
 
 	/* drawer
+	 * サブメニュー開く
 	================================================================ */
 	$(document).on('click','#siteHeader .toggle a',function(){
 		if (this.text == "Close") {
 			return;
 		}
+		$("#operation").hide();
+		$("#confirmForm").hide();
 		$('#drawer .inner .menu .local .sub>a').each(function(){
 			$(this).removeClass('open');
 			$(this).next('ul').css({'display':'none'});
@@ -39,6 +42,9 @@ $(function(){
 		$('#wrapper').css({position:'fixed','height':'100%','overflow':'hidden'});
 		$('#drawer .inner .menu').css({'height':$(window).height() - $('#drawer .promo').height()});
 	});
+	/*
+	 * サブメニュー閉じる
+	 */
 	$(document).on('click','#drawer',function(e){
 		if ($(e.target.parentElement).is('.inner')) {
 			//白い部分をクリックしてもメニューは表示されたままにする
@@ -48,6 +54,9 @@ $(function(){
 			}
 			$('#drawer .inner').animate({left:'-100%'},500);
 			$('#drawer').wait(500).fadeOut();
+			setTimeout(function(){
+				$("#operation").show().$("#confirmForm").show();
+			}, 700);
 			$('body').css({'height':'auto'});
 			$('#wrapper').attr({style:''});
 		}

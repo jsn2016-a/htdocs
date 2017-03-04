@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html ng-app="sfcApp" ng-controller="indexCtrl as index">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex,noarchive">
+	<title page-title></title>
+	<script type="text/javascript">document.write('<base href="' + location.pathname.substr(0, location.pathname.lastIndexOf("/")+1) + '">');</script>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon-144x144.png">
+	<link rel="stylesheet" type="text/css" ng-href="css/angular-block-ui.css">
+	<link rel="stylesheet" type="text/css" ng-href="css/block.css">
+	<link rel="stylesheet" type="text/css" ng-href="css/styles_{{index.styleType}}.css">
+	<link rel="stylesheet" type="text/css" ng-href="css/pages_{{index.styleType}}.css">
+	<link rel="stylesheet" type="text/css" ng-href="css/keyboard_pc.css">
+	<link rel="stylesheet" type="text/css" ng-href="css/common.css">
+	<script>window.$ = window.jQuery = WLJQ;</script>
+	<script src="js/lib/angular.js"></script>
+	<script src="js/lib/angular-sanitize.js"></script>
+	<script src="js/lib/angular-cookies.js"></script>
+	<script src="js/lib/angular-block-ui.js"></script>
+	<script src="js/lib/angular-ui-router.js"></script>
+	<script src="js/lib/angular-translate.js"></script>
+	<script src="js/lib/angular-translate-loader-static-files.js"></script>
+	<script src="js/lib/translate-once.js"></script>
+	<script src="js/lib/moji.standalone.js"></script>
+	<script src="js/lib/sha.js"></script>
+	<script src="js/lib/moment.js"></script>
+	<script src="js/lib/jquery-ui.custom/jquery-ui.min.js"></script>
+	<script src="js/lib/validate.min.js"></script>
+	<script src="js/holidays.js"></script>
+	<script src="js/datePickerCustom.js"></script>
+	<script type="text/javascript">
+	// PC/SP判定
+	var mode;
+	if (window.location.search.substring(1).match(/[&]*mode=2[&]*/)) {
+		mode = "sp";
+
+		// sp画面だった場合はviewportタグを読込み
+		angular.element(document.getElementsByTagName('head')).append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">');
+	} else {
+		mode = "pc";
+	}
+	
+	// Adobe Analyticsで使用
+//	var _sc = _sc || {};
+	
+	// F5とCtrl+Rによる更新無効化
+	document.onkeydown = function(event){
+		switch (event.keyCode){
+			case 116: //F5
+				event.returnValue = false;
+				event.keyCode = 0;
+				return false;
+			case  82: //R
+				if (event.ctrlKey || event.metaKey){
+					event.returnValue = false;
+					event.keyCode = 0;
+					return false;
+				}
+		}
+	}
+
+	</script>
+	<!-- 
+	<script src="//assets.adobedtm.com/971c7a32cdd7bb1af8aef5bfe7bf3656420bf9b3/satelliteLib-6e316c4af3efc24022ae802d990c610fe95b9944.js"></script>
+ -->	
+</head>
+<body ng-class="index.body_class" data-active-nav="{{index.active_nav}}" data-active-loc="{{index.active_loc}}" data-current-pos="0" ng-cloak no-pull-to-reload>
+	<div ng-if="index.styleType == 'pc'" id="wrapper">
+		<header id="siteHeader" ui-view="header"></header>
+		<div ng-show="index.util.getDisplayFlg()" id="container" ui-view="container"></div>
+		
+		<div ng-show="index.util.getDisplayFlg()" class="version" ng-bind="index.view_id" nc-set-focus></div>
+		<footer ng-show="index.util.getDisplayFlg()" id="siteFooter" ui-view="footer"></footer>
+	</div>
+	<div ng-if="index.styleType == 'sp'" id="wrapper">
+		<header id="siteHeader" ui-view="header"></header>
+		<div ng-show="!index.util.getDisplayFlg()" style="height:200px;"></div>
+		<div ng-show="index.util.getDisplayFlg()" id="container" ui-view="container"></div>
+		<footer ng-show="index.util.getDisplayFlg()" id="siteFooter" ui-view="footer"></footer>
+	</div>
+	<div class="pgTop"><a href="#wrapper"></a></div>
+
+	<script src="/webjs/initOptions.js"></script>
+	<script src="/webjs/clientProperties.js"></script>
+	<script src="js/main.js"></script>
+	
+	<script src="js/AuthenticatorRealmChallengeHandler.js"></script>
+	
+	<script type="text/javascript">
+		document.write('<script src="js/scripts_' + mode + '.js"><\/script>');
+	</script>
+	
+	<script src="js/grid.js"></script>
+	<script src="js/keyboard.js"></script>
+	<!-- application -->
+	<script src="js/sfcApp.js"></script>
+	<!-- service -->
+	<script src="js/service/constants.js"></script>
+	<script src="js/service/utility.js"></script>
+	<script src="js/service/directices.js"></script>
+	<script src="js/service/CM_common.js"></script>
+	<script src="js/service/EM_Email.js"></script>
+	<script src="js/service/LG_login.js"></script>
+	<script src="js/service/PW_password.js"></script>
+	<script src="js/service/TP_top.js"></script>
+	<script src="js/service/TR_transfer.js"></script>
+	<script src="js/service/SA_twoFactorAuthenticationDevice.js"></script>
+	<script src="js/service/AI_account.js"></script>
+	<script src="js/service/FD_fx.js"></script>
+	<script src="js/service/LM_transferLimit.js"></script>
+	<!-- controller -->
+	<script src="js/controller/index.js"></script>
+	<script src="js/controller/CP0001_header.js"></script>
+	<script src="js/controller/CP0002_footer.js"></script>
+	<script src="js/controller/CS9999_error.js"></script>
+	<script src="js/controller/CS9999_error_noLogout.js"></script>
+	<script src="js/controller/LG0001_login.js"></script>
+	<script src="js/controller/LG0003_ssoLogin.js"></script>
+	<script src="js/controller/LG0004_logout_confirm.js"></script>
+	<script src="js/controller/LG0005_logout_complete.js"></script>
+	<script src="js/controller/FD0001_fx_top.js"></script>
+	<script src="js/controller/FD0002_fx_input.js"></script>
+	<script src="js/controller/FD0003_fx_confirm.js"></script>
+	<script src="js/controller/FD0004_fx_complete.js"></script>
+	<script src="js/controller/TP0001_top.js"></script>
+	<script src="js/controller/TP0002_passwordexpired.js"></script>
+	<script src="js/controller/TR0001_transfer_top.js"></script>
+	<script src="js/controller/TR0002_transfer_beneficiary_list.js"></script>	
+	<script src="js/controller/TR0003_transfer_input_account.js"></script>
+	<script src="js/controller/TR0006_transfer_input_amount.js"></script>
+	<script src="js/controller/TR0007_transfer_confirm.js"></script>
+	<script src="js/controller/TR0009_transfer_complete.js"></script>
+	<script src="js/controller/TR0010_transfer_history.js"></script>
+	<script src="js/controller/TR0011_transfer_delete_beneficiary.js"></script>
+	<script src="js/controller/PW0001_settings_pass_input.js"></script>
+	<script src="js/controller/PW0003_userSettings_pass_complete.js"></script>
+	<script src="js/controller/RG0001_settings_top.js"></script>
+	<script src="js/controller/SA0001_spAuth_register.js"></script>
+	<script src="js/controller/SA0002_spAuth_input.js"></script>
+	<script src="js/controller/SA0004_spAuth_complete.js"></script>
+	<script src="js/controller/SA0005_spAuth_delete.js"></script>
+	<script src="js/controller/SA0007_spAuth_complete_delete.js"></script>
+	<script src="js/controller/AI0001_account_info.js"></script>
+	<script src="js/controller/AI0002_account_activity.js"></script>
+	<script src="js/controller/EM0001_mail_register_change.js"></script>
+	<script src="js/controller/EM0002_mail_confirm.js"></script>
+	<script src="js/controller/EM0003_mail_complete.js"></script>
+	<script src="js/controller/LM0001_userSettings_transferLimits_input.js"></script>
+	<script src="js/controller/LM0002_userSettings_transferLimits_confirm.js"></script>
+	<script src="js/controller/LM0003_userSettings_transferLimits_complete.js"></script>
+	<!-- Adobe Analytics 
+	<script type="text/javascript">try{_satellite.pageBottom();}catch(e){}</script>-->
+</body>
+</html>
