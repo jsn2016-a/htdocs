@@ -3,8 +3,6 @@ os: linux
 files:
   - source: /.settings
     destination: /var/www/html/
-  - source: /bk
-    destination: /var/www/html/
   - source: /css
     destination: /var/www/html/
   - source: /images
