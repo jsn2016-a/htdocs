@@ -13,7 +13,7 @@ files:
     destination: /var/www/html/
   - source: /.project
     destination: /var/www/html/
-  - source: /.tem-project
+  - source: /.tern-project
     destination: /var/www/html/
   - source: /index.html
     destination: /var/www/html/
