@@ -1,10 +1,16 @@
 /**
  * 共通機能
  */
-angular.module('utility')
+angular.module('utility',[])
 .factory('util', ['$rootScope', '$timeout', '$location', '$state', '$stateParams', 
 	function($rootScope, $timeout, $location, $state, $stateParams){
-		
+		var session = new SessionManager();
+		return {
+			// セッション管理機能オブジェクト取得
+			session : function() {
+				return session;
+			},
+		}
 	}
 ])
 

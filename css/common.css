@@ -50,11 +50,11 @@ div.pictureList{height: 102px;width: 100%;overflow: auto;white-space: nowrap;mar
 .pictureList li{display:inline;}
 .pictureList li img{width: 100px; height:100px;}
 
-div#operation {width:100%;}
+div#operation {width:100%; height:50px;}
 div#operation .operationButtonSpace{float:left; width:33%; height: 50px;}
 div#operation .operationButtonSpace.last{width:34%;}
 
-div#operation .operationButton{width: calc(100% - 24px);height: 36px;position: relative;top: 8px;left: 12px;}
+div#operation .operationButton{width: calc(100% - 24px);height: 36px;position: relative;top: 8px;left: 12px; border-radius: 5px;}
 
 div#operation .operationButton.add{background-color: #55d2f6;}
 div#operation .operationButton.edit{background-color: #55f679;}
@@ -70,6 +70,7 @@ div#confirmForm .confirmButton.ok{background-color: #55f679;}
 
 .menberList li{list-style:none;height:35px;background-color:lightblue;font-weight:400;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:6px 12px;font-size:14px;line-height:1.428571429;border-radius:4px; margin-bottom: 8px;}
 
+.editGroupList li{border:1px solid; height: 30px;padding-left: 10px; line-height: 27px;margin: 0px 5px 5px 5px;border-radius: 5px;}
 
 /* サブメニュー */
 #siteHeader .logout{position:absolute; right:15px; top:16px; text-align:right; font-size:10px;}

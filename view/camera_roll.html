@@ -2,48 +2,13 @@
 <div class="version"></div>
 <div class="intro">
 
-<div class="categoryTitle">ポートレイト</div>
-<div class="pictureList">
-	<ul>
-		<li><img src="images/import_images/beatles@sgt_peppers.jpg" data-toggle="modal" data-target="#myModal"></li>
-		<li><img src="images/import_images/jimihendrix@axis.jpg"></li>
-		<li><img src="images/import_images/nirvana@nevermind.jpg"></li>
-		<li><img src="images/import_images/prince@lovesexy.jpg"></li>
-		<li><img src="images/import_images/red_hot@by_the_way.jpg"></li>
-	</ul>
-</div>
-
-<div class="categoryTitle">風景</div>
-<div class="pictureList">
-	<ul>
-		<li><img src="images/import_images/beatles@sgt_peppers.jpg"></li>
-		<li><img src="images/import_images/jimihendrix@axis.jpg"></li>
-		<li><img src="images/import_images/nirvana@nevermind.jpg"></li>
-		<li><img src="images/import_images/prince@lovesexy.jpg"></li>
-		<li><img src="images/import_images/red_hot@by_the_way.jpg"></li>
-	</ul>
-</div>
-
-<div class="categoryTitle">風景</div>
-<div class="pictureList">
-	<ul>
-		<li><img src="images/import_images/beatles@sgt_peppers.jpg"></li>
-		<li><img src="images/import_images/jimihendrix@axis.jpg"></li>
-		<li><img src="images/import_images/nirvana@nevermind.jpg"></li>
-		<li><img src="images/import_images/prince@lovesexy.jpg"></li>
-		<li><img src="images/import_images/red_hot@by_the_way.jpg"></li>
-	</ul>
-</div>
-
-<div class="categoryTitle">風景</div>
-<div class="pictureList">
-	<ul>
-		<li><img src="images/import_images/beatles@sgt_peppers.jpg"></li>
-		<li><img src="images/import_images/jimihendrix@axis.jpg"></li>
-		<li><img src="images/import_images/nirvana@nevermind.jpg"></li>
-		<li><img src="images/import_images/prince@lovesexy.jpg"></li>
-		<li><img src="images/import_images/red_hot@by_the_way.jpg"></li>
-	</ul>
+<div ng-repeat="picture in pictureList">
+	<div class="categoryTitle" ng-bind="picture.title"></div>
+	<div class="pictureList">
+		<ul>
+			<li ng-repeat="image in picture.images"><img ng-src="{{image.image}}" data-toggle="modal" data-target="#myModal"></li>
+		</ul>
+	</div>
 </div>
 
 <!-- モーダルウィンドウ  -->

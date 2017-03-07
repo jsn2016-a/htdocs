@@ -1,73 +1,16 @@
-
 <div class="version"></div>
 <div class="intro">
 
-<div id="operation">
-<!-- 
-<ul>
-	<li>作成</li>
-	<li>編集</li>
-	<li>削除</li>
-</ul>
- -->
-	<div class="operationButtonSpace"><div class="operationButton add" ng-click="add()">作成</div></div>
-	<div class="operationButtonSpace"><div class="operationButton edit">編集</div></div>
-	<div class="operationButtonSpace last"><div class="operationButton remove">削除</div></div>
-</div>
-<div class="inner">
-		<div class="menu">
-			<nav class="local">
-				<ul>
-<!-- 
-					<li ng-click="transitionCamera('cameraRoll', 'all')"><a>カメラロール</a></li>
- -->
-					<li class="sub"><a>地元の友達</a>
-						<ul id="ln01">
-							<li ng-click="transitionCamera('friend', '1')"><a>2016.6.1 金沢旅行</a></li>
-							<li ng-click="transitionCamera('friend', '2')"><a>2015.5.5 バーベキュー</a></li>
-							<li ng-click="transitionCamera('friend', '3')"><a>日常スナップ</a></li>
-						</ul>
-					</li>
-					<li class="sub"><a>Jazz研究会</a>
-						<ul id="ln01">
-							<li ng-click="transitionCamera('jazz', '1')"><a>2016.2.18 冬合宿</a></li>
-							<li ng-click="transitionCamera('jazz', '2')"><a>2015.12.16 クリスマスライブ</a></li>
-							<li ng-click="transitionCamera('jazz', '3')"><a>2015.11.2 学園祭 一日目</a></li>
-							<li ng-click="transitionCamera('jazz', '4')"><a>2015.4.20 新人歓迎会</a></li>
-						</ul>
-					</li>
-					<li ng-click="transitionGroup('selectGroup', '')"><a>グループ選択画面へ</a></li>
-					
-										<li class="sub"><a>Jazz研究会</a>
-						<ul id="ln01">
-							<li ng-click="transitionCamera('jazz', '1')"><a>2016.2.18 冬合宿</a></li>
-							<li ng-click="transitionCamera('jazz', '2')"><a>2015.12.16 クリスマスライブ</a></li>
-							<li ng-click="transitionCamera('jazz', '3')"><a>2015.11.2 学園祭 一日目</a></li>
-							<li ng-click="transitionCamera('jazz', '4')"><a>2015.4.20 新人歓迎会</a></li>
-						</ul>
-					</li>
-										<li class="sub"><a>Jazz研究会</a>
-						<ul id="ln01">
-							<li ng-click="transitionCamera('jazz', '1')"><a>2016.2.18 冬合宿</a></li>
-							<li ng-click="transitionCamera('jazz', '2')"><a>2015.12.16 クリスマスライブ</a></li>
-							<li ng-click="transitionCamera('jazz', '3')"><a>2015.11.2 学園祭 一日目</a></li>
-							<li ng-click="transitionCamera('jazz', '4')"><a>2015.4.20 新人歓迎会</a></li>
-						</ul>
-					</li>
-										<li class="sub"><a>Jazz研究会</a>
-						<ul id="ln01">
-							<li ng-click="transitionCamera('jazz', '1')"><a>2016.2.18 冬合宿</a></li>
-							<li ng-click="transitionCamera('jazz', '2')"><a>2015.12.16 クリスマスライブ</a></li>
-							<li ng-click="transitionCamera('jazz', '3')"><a>2015.11.2 学園祭 一日目</a></li>
-							<li ng-click="transitionCamera('jazz', '4')"><a>2015.4.20 新人歓迎会</a></li>
-						</ul>
-					</li>
-					
-					
-				</ul>
-			</nav>
+	<div id="operation">
+		<div class="operationButtonSpace"><div class="operationButton add" ng-click="add()">作成</div></div>
+		<div class="operationButtonSpace"><div class="operationButton edit">編集</div></div>
+		<div class="operationButtonSpace last"><div class="operationButton remove">削除</div></div>
+	</div>
+	<div class="inner">
+		<div class="editGroupList">
+			<ul>
+				<li ng-repeat="group in groupList" ng-click="edit(group.groupTitle)"><a ng-bind="group.groupTitle"></a></li>
+			</ul>
 		</div>
 	</div>
-
-
 </div>

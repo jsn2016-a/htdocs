@@ -4,6 +4,7 @@
 //Dependencies
 angular.module('cameraApp',[
 	'ui.router',
+	'utility' ,
 ])
 // Routes
 .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', 
@@ -95,6 +96,23 @@ angular.module('cameraApp',[
 				'container': {
 					templateUrl: 'view/add_group.html',
 					controller: 'addGroupCtrl'
+				},
+				'footer': {
+					templateUrl: 'view/footer.html',
+					controller: 'footerCtrl'
+				}
+			}
+		})
+		.state('groupEdit',{
+			url: '/edit/group',
+			views: {
+				'header': {
+					templateUrl: 'view/header.html',
+					controller: 'headerCtrl',
+				},
+				'container': {
+					templateUrl: 'view/edit_group.html',
+					controller: 'editGroupCtrl'
 				},
 				'footer': {
 					templateUrl: 'view/footer.html',
