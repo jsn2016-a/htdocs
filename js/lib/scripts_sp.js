@@ -26,7 +26,7 @@ $(function(){
 	/* drawer
 	 * サブメニュー開く
 	================================================================ */
-	$(document).on('click','#siteHeader .toggle a',function(){
+	$(document).on('click','#siteHeader .toggle',function(){
 		if (this.text == "Close") {
 			return;
 		}

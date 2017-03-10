@@ -23,6 +23,12 @@ angular.module('cameraApp')
 			$scope.headerTitle = util.session().get('headerTitle');
 			$state.go("group");
 		};
+		
+		$scope.transitionEditGroup = function(screenName){
+			$scope.headerTitle = util.session().set('headerTitle', screenName);
+			$scope.headerTitle = util.session().get('headerTitle');
+			$state.go("groupEdit");
+		};
 
 	}
 ]);

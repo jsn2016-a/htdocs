@@ -1,12 +1,10 @@
 <!-- 
  -->
 <div class="toggle">
+	<div class="iconBar"></div>
+	<div class="iconBar"></div>
+	<div class="iconBar"></div>
 	<a tabindex="2020">
-		<button type="button" id="header_menu" class="navbar-toggle toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
 	</a>
 </div>
 
@@ -14,6 +12,10 @@
 	<div class="toggle"><a tabindex="2230">Close</a></div>
 	<div class="inner">
 		<div class="menu">
+			<div class="menuHeader">
+				<div class="cancelButton"></div>
+				<div class="menuTitle"><span>Groups</span></div>
+			</div>
 			<nav class="local">
 				<ul>
 					<li class="sub" ng-repeat="group in groupList">
@@ -22,11 +24,13 @@
 							<li ng-repeat="event in group.events" ng-click="transitionCamera(event.eventTitle)"><a ng-bind="event.eventTitle"></a></li>
 						</ul>
 					</li>
-					<li ng-click="transitionGroup('グループ選択画面')"><a>グループ選択画面へ</a></li>
-										
 				</ul>
 			</nav>
+			<div class="menuFooter">
+				<div class="groupButton" ng-click="transitionGroup('Create')">Create</div>
+			</div>
 		</div>
 	</div>
 </div>
 <div id="headerTitle" ng-bind="headerTitle"></div>
+<div id="settingIcon" ng-click="transitionEditGroup('Edit')"><img src="images/import_images/setting.png"></img></div>

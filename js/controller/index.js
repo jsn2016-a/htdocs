@@ -10,21 +10,57 @@ angular.module('cameraApp')
 		 * カメラロール画面
 		 */
 		util.session().set("pictureList", [{
-				"title":"ポートレイト",
-				"images":[{image:imageUrl + "beatles@sgt_peppers.jpg"},
-				          {image:imageUrl + "jimihendrix@axis.jpg"},
-						  {image:imageUrl + "nirvana@nevermind.jpg"},
-				          {image:imageUrl + "prince@lovesexy.jpg"},
-					      {image:imageUrl + "red_hot@by_the_way.jpg"}]
+				"title":"Portlate",
+				"images":[{image:imageUrl + "beatles@sgt_peppers.jpg",
+						group:"教育実習",
+						category:"Portlate",
+						create:"石澤",
+						date:"2017.12.30",
+						place:"東京都港区海岸",
+						comment:"I love the beatles!!",
+						good:0,
+						bad:0
+					},
+				    {image:imageUrl + "jimihendrix@axis.jpg",
+						group:"教育実習",
+						category:"Sport",
+						create:"須貝",
+						date:"2016.9.11",
+						place:"桜上水",
+						comment:"god",
+						good:0,
+						bad:0
+					},
+					{image:imageUrl + "nirvana@nevermind.jpg"},
+				    {image:imageUrl + "prince@lovesexy.jpg"},
+					{image:imageUrl + "red_hot@by_the_way.jpg"}]
 			},
 			{
-				"title":"風景",
+				"title":"Landscape",
 				"images":[{image:imageUrl + "beatles@sgt_peppers.jpg"},
 				          {image:imageUrl + "jimihendrix@axis.jpg"},
 						  {image:imageUrl + "nirvana@nevermind.jpg"},
 				          {image:imageUrl + "prince@lovesexy.jpg"},
 					      {image:imageUrl + "red_hot@by_the_way.jpg"}]
 			}
+		]);
+		
+		util.session().set("categoryList", [{
+			"title":"Sport",
+			"disp":true
+		},
+		{
+			"title":"Landscape",
+			"disp":true
+		},
+		{
+			"title":"Portlate",
+			"disp":true
+		},
+		{
+			"title":"Group Photo",
+			"disp":false
+		},
 		]);
 		
 		/*
@@ -69,7 +105,7 @@ angular.module('cameraApp')
 		/*
 		 * ヘッダータイトル指定
 		 */
-		util.session().set("headerTitle", "カメラロール画面");
+		util.session().set("headerTitle", "All");
 		
 		$state.go("camera");
 

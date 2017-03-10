@@ -3,10 +3,17 @@
 <div class="intro">
 
 <div ng-repeat="picture in pictureList">
-	<div class="categoryTitle" ng-bind="picture.title"></div>
+	<div class="categoryTitle">
+		<div ng-bind="picture.title"></div>
+		<div class="categoryDetailArea">
+			<div class="goodButton"><img src="images/import_images/good_ivory.png"></img><span class="goodCount">168</span></div>
+			<div class="loveButton"><img src="images/import_images/love_ivory.png"></img><span class="goodCount">95</span></div>
+			<div></div>
+		</div>
+	</div>
 	<div class="pictureList">
 		<ul>
-			<li ng-repeat="image in picture.images"><img ng-src="{{image.image}}" data-toggle="modal" data-target="#myModal"></li>
+			<li ng-repeat="image in picture.images"><img ng-src="{{image.image}}" ng-click="showDetail($parent.$index, $index)" data-toggle="modal" data-target="#myModal" class="picture"></li>
 		</ul>
 	</div>
 </div>
@@ -15,16 +22,65 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-			</div>
 			<div class="modal-body">
-				…
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<!-- igarashi start -->
+				<div>
+					<div class="modalTitle">
+						<small ng-bind="group"></small>
+					</div>
+					
+					<p><img ng-src="{{detailImage}}" width=100% height=100% /></p>
+				</div>
+				<!-- igarashi end -->
+				<!-- ishizawa start -->
+				<div class="intro">
+					<div>
+						<div ng-click="goodClick()" style="float:left; margin: 0px 30px 0px 0px;">
+							<img style="margin-bottom: 6px; width:16px; height:16px;" src="images/import_images/good_black.png" alt="LIKE" width="20" height="20" />
+							<span ng-bind="good"></span>
+						</div>
+						<div ng-click="badClick()" style="line-height: 0px; margin: 8px 30px 0px 0px;">
+							<img style="margin-bottom: 6px; width:14px; height:14px; margin-top: 3px;" src="images/import_images/love_black.png" alt="LIKE" width="20" height="20" />
+							<span ng-bind="bad"></span>
+						</div>
+					</div>
+					<div class="detailArea">
+						<div style="detailElement">
+							<span class="itemName">Category:</span><br>
+							<span class="item" ng-bind="category"></span>
+						</div>
+						<div class="detailSeparateLine"></div>
+						<div style="detailElement">
+							<span class="itemName">Contributor:</span><br>
+							<span class="item" ng-bind="create"></span>
+						</div>
+						<div class="detailSeparateLine"></div>
+						<div style="detailElement">
+							<span class="itemName">Date:</span><br>
+							<span class="item" ng-bind="date"></span>
+						</div>
+						<div class="detailSeparateLine"></div>
+						<div style="detailElement">
+							<span class="itemName">Place:</span><br>
+							<span class="item" ng-bind="place"></span>
+						</div>
+						<div class="detailSeparateLine"></div>
+						<div style="detailElement">
+							<span class="itemName">Comment:</span><br>
+							<span class="item" ng-bind="comment"></span>
+						</div>
+					</div>
+				</div>
+				<div class="pictureList related">
+					<ul>
+						<li><img src="images/import_images/beatles@sgt_peppers.jpg"></li>
+						<li><img src="images/import_images/jimihendrix@axis.jpg"></li>
+						<li><img src="images/import_images/nirvana@nevermind.jpg"></li>
+						<li><img src="images/import_images/prince@lovesexy.jpg"></li>
+						<li><img src="images/import_images/red_hot@by_the_way.jpg"></li>
+					</ul>
+				</div>
+				<!-- ishizawa end -->
 			</div>
 		</div>
 	</div>
