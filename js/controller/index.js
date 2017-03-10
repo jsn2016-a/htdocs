@@ -31,7 +31,7 @@ angular.module('cameraApp')
 						good:0,
 						bad:0
 					},
-					{image:imageUrl + "nirvana@nevermind.jpg"},
+					{image:imageUrl + "test.png"},
 				    {image:imageUrl + "prince@lovesexy.jpg"},
 					{image:imageUrl + "red_hot@by_the_way.jpg"}]
 			},
