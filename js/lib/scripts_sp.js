@@ -42,25 +42,46 @@ $(function(){
 		$('#wrapper').css({position:'fixed','height':'100%','overflow':'hidden'});
 		$('#drawer .inner .menu').css({'height':$(window).height() - $('#drawer .promo').height()});
 	});
-	/*
-	 * サブメニュー閉じる
-	 */
-	$(document).on('click','#drawer, .menuHeader',function(e){
-		if ($(e.target.parentElement).is('.inner')) {
-			//白い部分をクリックしてもメニューは表示されたままにする
-		}else{
-			if ($(e.target.parentElement).is('.sub')) {
-				return false;
-			}
-			$('#drawer .inner').animate({left:'-100%'},500);
-			$('#drawer').wait(500).fadeOut();
-			setTimeout(function(){
-				$("#operation").show().$("#confirmForm").show();
-			}, 700);
-			$('body').css({'height':'auto'});
-			$('#wrapper').attr({style:''});
-		}
-	});
+//	/*
+//	 * サブメニュー閉じる
+//	 */
+//	$(document).on('click','#drawer, .menuHeader',function(e){
+//		if ($(e.target.parentElement).is('.inner')) {
+//			//白い部分をクリックしてもメニューは表示されたままにする
+//		}else{
+//			if ($(e.target.parentElement).is('.sub')) {
+//				return false;
+//			}
+//			$('#drawer .inner').animate({left:'-100%'},500);
+//			$('#drawer').wait(500).fadeOut();
+//			setTimeout(function(){
+//				$("#operation").show().$("#confirmForm").show();
+//			}, 700);
+//			$('body').css({'height':'auto'});
+//			$('#wrapper').attr({style:''});
+//		}
+//	});
+//	
+//	$('#drawer, .menuHeader').on('click',function(e){
+//		alert("aaaa");
+//		if ($(e.target.parentElement).is('.inner')) {
+//			//白い部分をクリックしてもメニューは表示されたままにする
+//		}else{
+//			if ($(e.target.parentElement).is('.sub')) {
+//				return false;
+//			}
+//			$('#drawer .inner').animate({left:'-100%'},500);
+//			$('#drawer').wait(500).fadeOut();
+//			setTimeout(function(){
+//				$("#operation").show().$("#confirmForm").show();
+//			}, 700);
+//			$('body').css({'height':'auto'});
+//			$('#wrapper').attr({style:''});
+//		}
+//	});
+
+	
+	
 	$(document).on('click','#drawer .inner .menu .local .sub>a',function(e){
 		if($(this).hasClass('open')){
 			$(this).removeClass('open');
