@@ -45,7 +45,7 @@ $(function(){
 	/*
 	 * サブメニュー閉じる
 	 */
-	$(document).on('click','#drawer, #siteHeader .cancelButton',function(e){
+	$(document).on('click','#drawer, .menuHeader',function(e){
 		if ($(e.target.parentElement).is('.inner')) {
 			//白い部分をクリックしてもメニューは表示されたままにする
 		}else{

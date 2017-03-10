@@ -4,6 +4,8 @@
 angular.module('cameraApp')
 .controller('indexCtrl', ['$window', '$scope', '$state', '$location', '$timeout', '$http', 'util',
 	function($window, $scope, $state, $location, $timeout, $http, util){
+		util.session().set("firstView", false);
+	
 		var imageUrl = "images/import_images/";
 		/*
 		 * デモ用項目定義
