@@ -114,9 +114,9 @@ div.pictureList.related{margin-left:0px; margin-top:10px; width:100%; height:120
 .editArea .editNameField{outline: 0;border: 0px;background: transparent;font-size: 20px;width: 83%;}
 .editArea .editIcon{float: right;margin-right: 26px;margin-top: 0px;}
 .editArea .editIcon img{width:20px;height:20px;}
+.editArea .clickArea{color:#312f2d; width: 100%;height: 100%;display: block;}
 
 .editArea .nameUnderLine{border-bottom: 1px solid;border-bottom-color: #c1be86;width: 94%;}
-
 .editButton{width:96%;height: 40px;background-color: #c1be86;margin-top: 22px;border-radius: 5px; padding: 10px 0px 0px 14px; font-weight: bold;}
 
 /* サブメニュー */
@@ -126,7 +126,7 @@ div.pictureList.related{margin-left:0px; margin-top:10px; width:100%; height:120
 /*
 #siteHeader .toggle a{width:40px; height:20px; display:block; text-indent:50px; overflow:hidden; white-space:nowrap; background:url(../images/sprite_sp.png) no-repeat -340px 0; background-size:500px auto;} 
 */
-#siteHeader .toggle a{width:40px; height:100%; display:block; text-indent:50px; overflow:hidden; white-space:nowrap; background-size:500px auto;} 
+#siteHeader .toggle a{margin-top: -32px;margin-left: -5px;width:40px; height:100%; display:block; text-indent:50px; overflow:hidden; white-space:nowrap; background-size:500px auto;} 
 #siteHeader .toggle .iconBar{width: 30px; height: 4px; background-color: #eb9710; margin-bottom: 4px;}
 #drawer{background:rgba(0,0,0,.4); position:fixed; left:0; top:0; width:100%; height:100%; padding-right:50px; z-index:100; display:none;}
 /*
