@@ -5,7 +5,7 @@ angular.module('cameraApp')
 .controller('cameraRollCtrl', ['$rootScope', '$window', '$scope', '$location', '$timeout', '$http','$stateParams', '$state','util',
 	function($rootScope, $window, $scope, $location, $timeout, $http, $stateParams, $state, util){
 		$timeout(function(){
-			$scope.pictureList = util.session().get('pictureList');
+//			$scope.pictureList = util.session().get('pictureList');
 			$timeout(function(){
 				if(!util.session().get("firstView")){
 					// 撮影した画像を最初に表示させる
@@ -36,12 +36,30 @@ angular.module('cameraApp')
 		                
 						util.session().set("firstView", true);
 						
+						var newPicture = {
+								"title":resultCsvArray[0].split(",")[1],
+								"images":[{image:"https://s3-us-west-2.amazonaws.com/jmason-reko/images/kenzo/test.jpg",
+										group:"教育実習",
+										category:resultCsvArray[0].split(",")[1],
+										create:"JMAS 太郎",
+										date:"2017.3.11",
+										place:"東京都港区海岸",
+										comment:"あんなこといいな。",
+										good:0,
+										bad:0
+									}]
+							}
+						var pictureList = util.session().get('pictureList');
+						pictureList.unshift(newPicture);
+						$scope.pictureList = pictureList;
+//						$scope.pictureList.unshift(newPicture);
+						util.session().set('pictureList', $scope.pictureList);
 		            }).error(function(data, status, headers, config) {
 		            });
 					
-					$(".categoryTitle").on("click", function(){
-						alert("aa");
-					})
+//					$(".categoryTitle").on("click", function(){
+//						alert("aa");
+//					})
 
 				}
 			});
