@@ -11,8 +11,9 @@ angular.module('cameraApp')
 		 * デモ用項目定義
 		 * カメラロール画面
 		 */
-		util.session().set("pictureList", [{
+		util.session().set("pictureList", [
 *************************************************************************************************
+				{
 				"title":"Furniture",
 				"images":[{image:imageUrl + "IMG_8677.JPG",
 						group:"教育実習",
