@@ -6,7 +6,7 @@ angular.module('cameraApp')
 	function($window, $scope, $state, $location, $timeout, $http, util){
 		util.session().set("firstView", false);
 	
-		var imageUrl = "images/import_images/";
+		var imageUrl = "images/photos/";
 		/*
 		 * デモ用項目定義
 		 * カメラロール画面

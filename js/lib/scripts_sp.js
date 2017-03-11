@@ -249,6 +249,7 @@ $(function(){
 			$(this).closest('form').find('.trigBtn').attr('disabled','disabled');
 		}
 	});
+	
 });
 
 // bind touch event

@@ -38,6 +38,11 @@ angular.module('cameraApp')
 						
 		            }).error(function(data, status, headers, config) {
 		            });
+					
+					$(".categoryTitle").on("click", function(){
+						alert("aa");
+					})
+
 				}
 			});
 		});
@@ -62,6 +67,8 @@ angular.module('cameraApp')
 			$scope.comment     = detail.comment;
 			$scope.good        = detail.good;
 			$scope.bad         = detail.bad;
+			$scope.categoryResult = detail.categoryResult;
+
 		}
 		
 		$scope.goodClick = function() {
